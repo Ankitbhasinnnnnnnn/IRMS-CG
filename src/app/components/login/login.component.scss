@@ -8,6 +8,10 @@
 //   width: 20rem;
 //   height: 20rem;
 // }
+// img {
+//   width: 12rem;
+//   height: 8rem;
+// }
 .main-div {
   height: 100vh;
   justify-content: center;
@@ -35,6 +39,13 @@ button:hover {
 input:focus {
   border: none !important;
   outline: none !important;
+}
+
+#email {
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
 }
 a {
   text-decoration-color: black;
