@@ -8,22 +8,12 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './Components/login/login.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-
-    SignupComponent
-
-    LoginComponent
-
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule
-  ],
+  declarations: [AppComponent, SignupComponent, LoginComponent],
+  imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
