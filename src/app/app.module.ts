@@ -3,17 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignupComponent } from './Components/signup/signup.component';
+import { SignupComponent } from './components/signup/signup.component';
 
-
-
+import { ComponentsModule } from './components/component.module';
+import { AdminLayoutComponent } from "./layouts/admin-layout/admin-layout.component";
+import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './Components/login/login.component';
-import { EmailVerificationComponent } from './Components/email-verification/email-verification.component';
+import { LoginComponent } from './components/login/login.component';
+import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
+
+
 
 @NgModule({
-  declarations: [AppComponent, SignupComponent, LoginComponent, EmailVerificationComponent],
-  imports: [BrowserModule, AppRoutingModule, NgbModule],
+  declarations: [AppComponent, SignupComponent, LoginComponent, EmailVerificationComponent,AdminLayoutComponent,AuthLayoutComponent ],
+  imports: [BrowserModule, AppRoutingModule, NgbModule,ComponentsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
