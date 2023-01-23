@@ -1,56 +1,108 @@
-<div class="container main-div">
-  <div class="row login">
-    <div
-      class="col-lg-8 d-flex justify-content-lg-center align-items-lg-center p-4"
-      id="form-card"
-    >
-      <div class="col-lg-4  email-verification-div ">
-         <img src="../../../assets/cg-logo.jpg" alt="img" /> 
-      </div>
-      <div class="col-lg-8 email-verification-div ">
-        <div class="d-flex justify-content-lg-center align-items-lg-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-            <path
-              d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
-            />
-          </svg>
-        </div>
-        <p class="d-flex justify-content-center align-items-center pt-2 head">
-          Your Login is Protected By Email Authenticator
-        </p>
-        <p class="d-flex justify-content-center align-items-center pt-2">
-          Please type in the code received on your email inbox
-        </p>
-        <form>
-          <div class="form-group svg-email">
-            <h1></h1>
 
-            <input
-              id="email"
-              type="text"
-              class="form-control border-0 border-bottom-login"
+<style>
+    body {
+    margin-bottom: 0px !important;
+    }
+  
+.ftco-section 
+{
+    color: #494949 !important;
+     
+}
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+    }
+.wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  height: 95%;
+  -webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24); }
+.img {
+    display: flex;
+    background-repeat: no-repeat;
+    background-color: #DC8633;
+    background-position: 50% 51%;
+}
+.img{
+    width: 35%;
+} .login-wrap {
+     width: 65%;
+   }
+
+.header_tag1{
+    margin-top: 8%; 
+    text-align: center;
+     font-size: 2em;
+     font-weight: bold;
+     color: #000000;
+}
+.header_tag2{
+    font-size: 1.3em; 
+    margin-top: 6%;
+    text-align: center;
+}
+.form-control {
+        padding: 0.375rem 0.75rem !important;
+        font-size: 0.8rem !important;
+    }
+</style>
+<section class="ftco-section verify-div d-flex justify-content-center align-items-center">
+    <div class="col-md-8 justify-content-center">
+                <div class="col-md-8 col-lg-11" style="width: 80% !important">
+                    <div class="wrap d-flex justify-content-center">
+                        <div class="img">
+                          <img class="p-4" src="https://cginfinity.com/wp-content/uploads/2022/04/logo-footer.svg" />
+
+                        </div>
+                        <div class="login-wrap p-4 p-md-5">
+                            <div class="d-flex justify-content-center">
+                                <div class="lock-icon">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                      d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
+                                    />
+                                  </svg>                                    
+                                </div>
+                            </div>
+
+                            <form method="post" asp-route-returnUrl="@Model.ReturnUrl" style="margin-top:10%">
+                              <p class="d-flex text-dark justify-content-center align-items-center pt-2 head">
+                                Your Login is Protected By Email Authenticator
+                              </p>
+                              <p class="d-flex  text-dark justify-content-center align-items-center pt-2">
+                                Please type in the code received on your email inbox
+                              </p>
+                              <input
+                          id="email"
+                      type="number"
+                     class="form-control border-0 border-bottom-login"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
               placeholder="Your Code"
             />
-          </div>
+          
 
-          <div class="form-check pt-4">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1"
-              >Remember this machine
-            </label>
-          </div>
-          <div class="d-flex justify-content-center align-items-center">
-            <a type="submit" routerLink="/dashboard" routerLinkActive="active" class="btn mt-3 px-4 py-2">Verify</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+                       
+                            <div class="form-group" style="margin-top:7%">
+                                <button  class="btn" id="verify_twoFactor"  routerLink="/dashboard"  routerLinkActive="active"     style="color:white;width: 100%;background-color: #FF8D00; border-color: #FF8D00;font-size:0.85rem;">Verify</button>
+                            </div>
+                            <div style="text-align: center; margin-top: 4%;">
+                                <p>
+                                    <a routerLink="/register"  routerLinkActive="active"    style="font-size:12px; color: #0077cc;font-weight:bold;"  >Go Back</a>
+                                </p>
+                            </div>
+                        </form>
+                        </div>
+                      </div>
+                      </div>
+                      </div>      
+</section>
+
