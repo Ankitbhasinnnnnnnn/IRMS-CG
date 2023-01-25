@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
@@ -9,7 +10,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent },
   { path: 'verify', component: EmailVerificationComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/register', pathMatch: 'full' },
+  
   {
     path: "dashboard",
     redirectTo: "dashboard",
@@ -35,10 +37,7 @@ const routes: Routes = [
       }
     ]
   },
-  {
-    path: "**",
-    redirectTo: "dashboard"
-  }
+ 
 ];
 
 @NgModule({

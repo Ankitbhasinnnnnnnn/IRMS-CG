@@ -81,6 +81,7 @@
                                 Please type in the code received on your email inbox
                               </p>
                               <input
+                              #code
                           id="email"
                       type="number"
                      class="form-control border-0 border-bottom-login"
@@ -92,14 +93,14 @@
 
                        
                             <div class="form-group" style="margin-top:7%">
-                                <button  class="btn" id="verify_twoFactor"  routerLink="/dashboard"  routerLinkActive="active"     style="color:white;width: 100%;background-color: #FF8D00; border-color: #FF8D00;font-size:0.85rem;">Verify</button>
+                                <button  class="btn" id="verify_twoFactor" type="button"  routerLink ="/{value}"  routerLinkActive="active" (click)="VerfiyOtp(code.value)"  style="color:white;width: 100%;background-color: #FF8D00; border-color: #FF8D00;font-size:0.85rem;">Verify</button>
                             </div>
                             <div style="text-align: center; margin-top: 4%;">
                                 <p>
-                                    <a routerLink="/register"  routerLinkActive="active"    style="font-size:12px; color: #0077cc;font-weight:bold;"  >Go Back</a>
+                                    <a    style="font-size:12px; color: #0077cc;font-weight:bold;"  >Go Back</a>
                                 </p>
                             </div>
-                        </form>
+                        </form> 
                         </div>
                       </div>
                       </div>

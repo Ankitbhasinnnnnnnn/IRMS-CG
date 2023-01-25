@@ -10,20 +10,21 @@ import { MySkillComponent } from "src/app/components/my-skill/my-skill.component
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ComponentsModule } from "../../components/component.module";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(AdminLayoutRoutes),
-    FormsModule,
-    HttpClientModule,
-    NgbModule,
-  ],
-  declarations: [
-    DashboardComponent,
-    MySkillComponent
-  
-    // RtlComponent
-  ]
+    declarations: [
+        DashboardComponent,
+        MySkillComponent
+        // RtlComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(AdminLayoutRoutes),
+        FormsModule,
+        HttpClientModule,
+        NgbModule,
+        ComponentsModule
+    ]
 })
 export class AdminLayoutModule {}
