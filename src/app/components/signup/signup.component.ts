@@ -22,9 +22,9 @@ signup(email:any, password:any) {
   this.registerservices.registerUser(userdata).subscribe((resp:any) => {
     console.log(resp);
     console.log(resp.isRegistered);
-    this.approuting.navigate(["/verify"]);
+    
     if(resp.isRegistered == true) {
-      
+      this.approuting.navigate(["/verify"]);
     }
     RegisterService.setEmail(email);
 

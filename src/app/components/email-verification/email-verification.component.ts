@@ -23,11 +23,11 @@ export class EmailVerificationComponent implements OnInit {
     }
     
 this.registerservice.VerifyOtp(creditianls).subscribe((resp:any) => {
-console.log(resp);
-this.routing.navigate(["/dashboard"])
-this.value = 'dashboard'
-if(resp.isOTPVerified == 'true'  ) {
 
+if(resp.isOTPVerified == 'true'  ) {
+  console.log(resp);
+  this.routing.navigate(["/dashboard"])
+  this.value = 'dashboard'
 console.log(this.value);
 }
 
