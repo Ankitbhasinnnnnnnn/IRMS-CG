@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
   public clicked2: boolean = false;
+   value!: Date;
 
   constructor() {}
 

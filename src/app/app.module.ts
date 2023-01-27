@@ -11,11 +11,13 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
-
-
+import {CalendarModule} from 'primeng/calendar'
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import {MenuItem} from 'primeng/api';                  //api
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent, SignupComponent, LoginComponent, EmailVerificationComponent,AdminLayoutComponent,AuthLayoutComponent ],
-  imports: [BrowserModule, AppRoutingModule, NgbModule,ComponentsModule,HttpClientModule],
+  imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule, NgbModule,ComponentsModule,HttpClientModule,AccordionModule, CalendarModule],
   providers: [],
   bootstrap: [AppComponent],
 })
