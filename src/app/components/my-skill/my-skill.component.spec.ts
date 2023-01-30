@@ -8,9 +8,8 @@ describe('MySkillComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MySkillComponent ]
-    })
-    .compileComponents();
+      declarations: [MySkillComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
