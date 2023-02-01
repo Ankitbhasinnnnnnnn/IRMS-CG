@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CalendarModule } from 'primeng/calendar';
-import { NavbarComponent } from '../Components/navbar/navbar.component';
-import { SidebarComponent } from '../Components/sidebar/sidebar.component';
-import { FooterComponent } from '../Components/footer/footer.component';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+
+import { FooterComponent } from "./footer/footer.component";
+import { NavbarComponent } from "./navbar/navbar.component";
+import { SidebarComponent } from "./sidebar/sidebar.component";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, NgbModule, CalendarModule],
+  imports: [CommonModule, RouterModule, NgbModule],
   declarations: [FooterComponent, NavbarComponent, SidebarComponent],
-  exports: [FooterComponent, NavbarComponent, SidebarComponent, CalendarModule],
+  exports: [FooterComponent, NavbarComponent, SidebarComponent]
 })
 export class ComponentsModule {}
