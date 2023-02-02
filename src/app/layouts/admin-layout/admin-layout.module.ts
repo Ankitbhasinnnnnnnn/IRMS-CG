@@ -8,14 +8,15 @@ import { AdminLayoutRoutes } from "./admin-layout.routing";
 import { DashboardComponent } from "../../components/dashboard/dashboard.component";
 import { MySkillComponent } from "src/app/components/my-skill/my-skill.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
-
+import { UserDetailsComponent } from "src/app/components/user-details/user-details.component";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ComponentsModule } from "../../components/component.module";
 
 @NgModule({
     declarations: [
         DashboardComponent,
-        MySkillComponent
+        MySkillComponent,
+        UserDetailsComponent
         // RtlComponent
     ],
     imports: [
