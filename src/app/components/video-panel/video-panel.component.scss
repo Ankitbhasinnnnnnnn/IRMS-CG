@@ -1,0 +1,9 @@
+.content {
+    background-color: #444461;
+}
+:host ::ng-deep  {
+    width: 100%;
+  }
+  .p-element  {
+    width: 100% !important;
+  }

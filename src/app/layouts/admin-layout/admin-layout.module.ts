@@ -16,7 +16,8 @@ import { ComponentsModule } from "../../components/component.module";
     declarations: [
         DashboardComponent,
         MySkillComponent,
-        UserDetailsComponent
+        UserDetailsComponent,
+        
         // RtlComponent
     ],
     imports: [

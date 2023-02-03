@@ -11,11 +11,17 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import { EmailVerificationComponent } from './components/email-verification/email-verification.component';
-                 //api
+import { VideoPanelComponent } from './components/video-panel/video-panel.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { SplitterModule } from "primeng/splitter";
+import { PanelMenuModule } from 'primeng/panelmenu';
+import {YouTubePlayerModule} from '@angular/youtube-player';
+
+
+
 @NgModule({
-  declarations: [AppComponent, SignupComponent, LoginComponent, EmailVerificationComponent,AdminLayoutComponent,AuthLayoutComponent ],
-  imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule, NgbModule,ComponentsModule,HttpClientModule],
+  declarations: [AppComponent, SignupComponent, LoginComponent, EmailVerificationComponent,AdminLayoutComponent,AuthLayoutComponent , VideoPanelComponent],
+  imports: [BrowserModule,BrowserAnimationsModule, AppRoutingModule, NgbModule,ComponentsModule,HttpClientModule , SplitterModule, PanelMenuModule, YouTubePlayerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

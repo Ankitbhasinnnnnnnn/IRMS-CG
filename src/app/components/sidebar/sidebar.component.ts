@@ -23,7 +23,7 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/maps",
+    path: "/video-panel",
     title: "Leaves",
     rtlTitle: "خرائط",
     icon: "icon-pin",
