@@ -4,12 +4,18 @@
 			<p-splitter layout="vertical" >
        
 					<ng-template pTemplate>
-            <youtube-player videoId="e8IbQZgJpJI"
+            <!-- <youtube-player videoId="e8IbQZgJpJI"
             suggestedQuality="highres" 
             [height]="400" 
             [width]="1300" 
             [startSeconds]="4"
-            ></youtube-player>
+            ></youtube-player> -->
+<br /><br /><br />
+
+<div *ngIf="showVideo">
+    <div id="player"></div>
+</div>
+
 					</ng-template>
 					<ng-template pTemplate>
 							<p-splitter [panelSizes]="[15,85]">
@@ -18,7 +24,7 @@
 											<div class="col flex align-items-center justify-content-center">
 													Description Panel
                           
-                         <p style="color: black" id="display">sdfghjhgfdsdfghgfdfghgfdfgh</p>
+                         <p style="color: black;" id="display">sdfghjhgfdsdfghgfdfghgfdfgh</p>
 											</div>
 									</ng-template>
 							</p-splitter>
