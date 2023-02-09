@@ -1,16 +1,3 @@
-<!-- <p-splitter [style]="{'height': '100vh','width':'auto'}"  [minSizes]="[10,0]"  styleClass="mb-5">
-	
-	<ng-template pTemplate>
-			<p-splitter layout="vertical" >
-       
-					<ng-template pTemplate>
-            <!-- <youtube-player videoId="e8IbQZgJpJI"
-            suggestedQuality="highres" 
-            [height]="400" 
-            [width]="1300" 
-            [startSeconds]="4"
-            ></youtube-player> -->
-
 <div class="grid">
   <div class="col-12">
     <p-card [style]="{ width: '100%', height: '5rem', padding: '0' }">
@@ -59,6 +46,45 @@
     <p-card [style]="{ width: '100%', height: '5rem', padding: '0' }">
       <ng-template pTemplate="content"> Course Content </ng-template>
     </p-card>
-    <p-panelMenu [model]="items" id="p-menu"></p-panelMenu>
+    <!-- <p-panelMenu [model]="items" id="p-menu"></p-panelMenu> -->
+    <p-accordion [multiple]="true">
+      <p-accordionTab header="Getting Started">
+        <p></p>
+      </p-accordionTab>
+      <p-accordionTab header="The Basics">
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo inventore veritatis et quasi architecto beatae vitae dicta
+          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+          qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit,
+          sed quia non numquam eius modi.
+        </p>
+      </p-accordionTab>
+      <p-accordionTab header="Debugging">
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+          et quas molestias excepturi sint occaecati cupiditate non provident,
+          similique sunt in culpa qui officia deserunt mollitia animi, id est
+          laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
+          distinctio. Nam libero tempore, cum soluta nobis est eligendi optio
+          cumque nihil impedit quo minus.
+        </p>
+      </p-accordionTab>
+      <p-accordionTab header="Components & Databinding Deep Dive">
+        <p></p>
+      </p-accordionTab>
+      <p-accordionTab header="Course Project - Components & Databinding">
+        <p></p>
+      </p-accordionTab>
+      <p-accordionTab header="Components & Databinding Deep Dive">
+        <p></p>
+      </p-accordionTab>
+      <p-accordionTab header="Exercise!  Building a Typing Game">
+        <p></p>
+      </p-accordionTab>
+    </p-accordion>
   </div>
 </div>
