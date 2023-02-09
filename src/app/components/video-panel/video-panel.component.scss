@@ -33,10 +33,18 @@
   font-size: 2rem;
 }
 
-:host ::ng-deep .p-panelmenu .p-panelmenu-header > a {
-  padding: 2rem;
-}
+// :host ::ng-deep .p-panelmenu .p-panelmenu-header > a {
+//   padding: 2rem;
+// }
 
+:host
+  ::ng-deep
+  .p-accordion
+  p-accordiontab
+  .p-accordion-header
+  .p-accordion-header-link {
+  padding: 2rem 0.5rem;
+}
 .grid {
   margin-right: 0 !important;
 }

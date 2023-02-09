@@ -19,6 +19,9 @@ import { TabMenuModule } from 'primeng/tabmenu';
 // import { YouTubePlayerModule } from '@angular/youtube-player';
 import { CardModule } from 'primeng/card';
 import { KnobModule } from 'primeng/knob';
+import { AccordionModule } from 'primeng/accordion';
+import { ButtonModule } from 'primeng/button';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { KnobModule } from 'primeng/knob';
     KnobModule,
     CardModule,
     TabMenuModule,
+    AccordionModule,
+    ButtonModule,
+    RippleModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
