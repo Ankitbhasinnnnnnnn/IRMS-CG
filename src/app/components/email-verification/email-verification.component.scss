@@ -1,62 +1,82 @@
-#form-card {
+#left {
+  background-color: red;
+}
+.left,
+.right {
+  height: 80vh;
   box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 1.5rem;
 }
-
-// img {
-//   margin-left: 6rem;
-//   width: 20rem;
-//   height: 20rem;
-// }
-// img {
-//   width: 12rem;
-//   height: 8rem;
-// }
+.left {
+  background-color: rgb(0, 44, 63);
+  border-bottom-left-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+.right {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  background-color: white;
+}
 .main-div {
-  height: 100vh;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  border-radius: 0.5rem;
+  padding-top: 3rem;
 }
-.login {
-  display: flex;
-  justify-content: center;
+#left-img {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
 }
-.login-btn {
-  color: black  !important;
-  background-color: #ffb81c !important;
-  background-image: none;
-} 
-button:hover {
- 
-  color: white;
-  background-color: #ffb81c;
+#ms-logo {
+  padding: 0 !important;
+  width: 2rem;
+  height: 2rem;
 }
-.form-check-input:checked {
-  background-color: #ffb81c;
-  border-color: #ffb81c;
+#right-img {
+  padding: 0 !important;
 }
 
-input:focus {
-  border: none !important;
-  outline: none !important;
+p {
+  text-align: center;
+  padding: 0.5rem 3rem;
 }
-
-#email {
-  padding: 20px;
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: normal;
-}
-a {
-  text-decoration-color: black;
+.para {
   color: black;
 }
+#email {
+  padding: 0.5rem 0.5rem;
+}
 
-.border-bottom-login {
-  border-bottom: 1.5px solid black !important;
-  outline: none !important;
-  border-radius: 0;
+:host ::ng-deep .grid {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+:host ::ng-deep {
+  //width: 365px;
+  height: 29px;
+
+  font-style: normal;
+
+  // line-height: 29px;
+  /* identical to box height */
+
+  text-align: center;
+}
+
+button {
+  padding: 5px 5rem 5px 5rem;
+  border: 1px solid rgb(0, 44, 63) !important;
+  color: rgb(0, 44, 63) !important;
+  border-radius: 0.3rem;
+}
+button img {
+  width: 22px;
+  height: 22px;
+}
+button > * {
+  vertical-align: middle;
+}
+:host ::ng-deep .p-button .p-button-label {
+  padding-left: 1rem !important;
+  color: white;
 }
 .form-control:focus {
   // border-color: #ff0000;
@@ -66,127 +86,8 @@ a {
   // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
   box-shadow: none;
 }
-button {
-  font-weight: bold;
-}
-//  svg icon inside placeholder for email-----
-.svg-email {
-  position: relative;
-}
-
-.svg-email:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 1rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 500 500' fill-rule='evenodd'%3E%3Cpath d='M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z'%3E%3C/path%3E%3C/svg%3E")
-    center / contain no-repeat;
-}
 
 input[type="text"] {
-  padding: 10px 30px;
+  padding: 10px 0.1rem;
   color: black;
-}
-//----ends here
-
-//svg icon for password starts here---
-
-.svg-password {
-  position: relative;
-}
-
-.svg-password:before {
-  content: "";
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  bottom: 0;
-  width: 1rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 448 512' fill-rule='evenodd'%3E%3Cpath d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z'%3E%3C/path%3E%3C/svg%3E")
-    center / contain no-repeat;
-}
-
-input[type="password"] {
-  padding: 10px 2.2rem;
-  color: black;
-}
-.login-btn {
-}
-//ends here
-//
-
-input {
-  color: black !important;
-}
-.wrap {
-width: 100%;
-overflow: hidden;
-background: #fff;
-border-radius: 5px;
-height: 100%;
--webkit-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
--moz-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24);
-box-shadow: 0px 10px 34px -15px rgba(0, 0, 0, 0.24); }
-.img {
-display: flex;
-background-repeat: no-repeat;
-background-color: #DC8633;
-background-position: 50% 53%;
-}
-.container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 100vh;
-}
-.lock-icon{
-  width: 10%;
-}
-.verify-div {
-  height: 100vh !important;
-}
-.img{
-width: 35%;
-} 
-.login-wrap {
-width: 65%;
-}
-
-.header_tag1{
-margin-top: 5%; 
-text-align: center;
-font-size: 2em;
-font-weight: bold;
-color: #000000;
-}
-.header_tag2{
-font-size: 1.3em; 
-margin-top: 6%;
-text-align: center;
-}
-
-.validation-summary-errors{
-   font-size: 0.8rem !important;
-}
-#Input_Password-error{
-   font-size: 0.8rem !important;
-}
-#Input_Email-error{
-   font-size: 0.8rem !important;
-}
-#sso_submit {
-   width: 100%;
-   margin-top: 1rem;
-   background: transparent;
-   /*border: 2px solid #8c8c8c;*/
-   color: #5e5e5e;
-   font-weight: 500;
-   border-radius: 0.25rem;
-}
-
-.login-div {
-height: 100vh;
-align-items: center;
 }
