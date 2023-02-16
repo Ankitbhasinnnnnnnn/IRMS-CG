@@ -1,0 +1,8 @@
+{
+    "nodemailer": {
+        "spec": "nodemailer",
+        "module": "nodemailer",
+        "builtin": false,
+        "known": false
+    }
+}
