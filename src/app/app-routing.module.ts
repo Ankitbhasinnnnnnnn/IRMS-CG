@@ -8,6 +8,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { VideoPanelComponent } from './Components/video-panel/video-panel.component';
 const routes: Routes = [
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent },
   { path: 'verify', component: EmailVerificationComponent },
