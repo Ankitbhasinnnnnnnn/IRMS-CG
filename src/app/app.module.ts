@@ -22,7 +22,8 @@ import { KnobModule } from 'primeng/knob';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
-
+import {InputTextModule} from 'primeng/inputtext';
+import {FormsModule} from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,8 @@ import { RippleModule } from 'primeng/ripple';
     AccordionModule,
     ButtonModule,
     RippleModule,
+    InputTextModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

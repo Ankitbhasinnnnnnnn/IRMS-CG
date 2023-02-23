@@ -1,6 +1,6 @@
 <div class="grid flex justify-content-center align-items-center p-3">
   <div
-    class="col-8 flex justify-content-center align-items-center flex-wrap main-div"
+    class="md:col-8 sm:col-12 lg:col-6 flex justify-content-center align-items-center flex-wrap main-div"
   >
     <div
       class="col-6 flex flex-column align-items-center justify-content-center left"
@@ -12,39 +12,39 @@
         to learn new skills.
       </p>
     </div>
-    <div class="col-6 flex align-items-center justify-content-center right">
-      <div class="block">
+    <div class="col-6 flex-column  right">
+
         <div
-          class="flex-column align-content-between justify-content-center my-8"
+          class=" w-100 div1"
         >
           <img
             src="../../../assets/CG-Logo_GoldNavy 2.svg"
             alt=""
             id="right-img"
           />
-          <h3 class="text-black-alpha-90 font-bold">Welcome to ITMS Portal</h3>
+          <h4 class="text-black-alpha-90 font-bold">Welcome to ITMS Portal</h4>
+
+
+          <div class="flex-colum px-5">
+            <!-- for email input  -->
+          <div class="emailLabel w-100 text-left text-lg pt-5">
+            <label for="emailInput">Email</label>
+             <input id="emailInput" type="email" aria-describedby="username1-help" pInputText class="w-100 px-3"/>
+           </div>
+
+          <!-- for password input -->
+           <div class="emailLabel w-100 text-left py-2">
+            <label for="passwordInput" class="text-base">Password</label>
+             <input id="passwordInput" type="password" aria-describedby="username1-help" pInputText class="w-100 px-3"/>
+           </div>
+
+            <button pButton pRipple type="button" class="p-button w-100 mt-2" id="signUpBtn">Sign Up</button>
+            <a id="memberText" href="#">Already a Member </a>
+
+          </div>
+          
         </div>
-        <div class="block align-items-center justify-content-center pt-4">
-          <h5 class="text-black-alpha-90 text-center font-bold p-2">
-            Login with your Microsoft Account
-          </h5>
-          <button 
-            pButton
-            pRipple
-            label="Login with Microsoft"
-            type="button"
-            class="p-button-outlined p-button-danger w-100 align-items-center "
-            id="ms-btn "
-          >
-           
-            <img
-              src="../../../assets/microsocft svg logo.svg"
-              alt=""
-              id="ms-logo"
-            />
-          </button>
-        </div>
+        
       </div>
     </div>
   </div>
-</div>

@@ -1,3 +1,6 @@
+*{
+  font-family: 'Lato', sans-serif;
+}
 #form-card {
   box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.1);
   border-radius: 1.5rem;
@@ -14,22 +17,15 @@
   display: flex;
   flex-direction: column;
 }
-input {
+#emailInput{
   color: black !important;
 }
 .login {
   display: flex;
   justify-content: center;
 }
-button {
-  border: 2px solid #ffb81c;
-  color: #ffb81c;
-}
-button:hover {
-  border: 2px solid #ffb81c;
-  color: white;
-  background-color: #ffb81c;
-}
+
+
 .form-check-input:checked {
   background-color: #ffb81c;
   border-color: #ffb81c;
@@ -58,9 +54,7 @@ a {
   // box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
   box-shadow: none;
 }
-button {
-  font-weight: bold;
-}
+
 //svg icons for form starts here---
 .svg-name {
   position: relative;
@@ -98,9 +92,6 @@ input[type="text"] {
     center / contain no-repeat;
 }
 
-input[type="email"] {
-  padding: 10px 30px;
-}
 
 ///-------
 
@@ -119,10 +110,6 @@ input[type="email"] {
     center / contain no-repeat;
 }
 
-input[type="password"] {
-  padding: 10px 30px;
-}
-
 //-------
 
 //ends here ----
@@ -135,6 +122,8 @@ input[type="password"] {
 .right {
   height: 80vh;
   box-shadow: 0px 0px 13px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
 }
 .left {
   background-color: rgb(0, 44, 63);
@@ -154,17 +143,21 @@ img {
   width: 100%;
   height: 100%;
 }
+#right-img{
+  padding:0 !important;
+  width: 86%;
+  height: 48px;
+}
 #ms-logo {
   padding: 0 !important;
   width: 2rem;
   height: 2rem;
 }
-#right-img {
-  padding: 0 !important;
-}
+
 p {
   text-align: center;
   padding: 0.5rem 3rem;
+ 
 }
 :host ::ng-deep .grid {
   margin-right: 0 !important;
@@ -183,19 +176,19 @@ p {
   text-align: center;
 }
 
-button {
-  padding: 5px 5rem 5px 5rem;
-  border: 1px solid rgb(0, 44, 63) !important;
-  color: rgb(0, 44, 63) !important;
-  border-radius: 0.3rem;
+
+
+
+:host::ng-deep .p-button {
+display: flex;
+justify-content: center;
 }
-button img {
-  width: 22px;
-  height: 22px;
+
+#memberText{
+  color:#28519E;
+
 }
-button > * {
-  vertical-align: middle;
-}
-:host ::ng-deep .p-button .p-button-label {
-padding-left: 1rem !important;
+#signUpBtn{
+  background-color: #002C3F;
+  color: whitesmoke;
 }
