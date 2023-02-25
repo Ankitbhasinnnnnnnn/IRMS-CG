@@ -7,7 +7,6 @@ import { VideoPanelComponent } from 'src/app/Components/video-panel/video-panel.
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
   { path: 'my-skills', component: MySkillComponent },
   { path: 'user-details', component: UserDetailsComponent },
   { path: 'video-panel', component: VideoPanelComponent },

@@ -1,149 +1,424 @@
+<div class="row m-0">
+  <div class="col-12">
+    <p-card [style]="{ padding: '0' }">
+      <ng-template pTemplate="body">
+        <div class="flex align-items-center justify-content-between">
+          <img src="../../../assets/CG-Logo_GoldNavy 2.svg" alt="" id="logo" />
+          <div class="flex align-items-center justify-content-between">
+            <p-avatar
+              icon="pi pi-user"
+              styleClass="p-mr-2"
+              size="large"
+              shape="circle"
+            ></p-avatar>
+            <label class="pl-1 font-bold">John Doe</label>
+            <div class="dropdown pl-2">
+              <button
+                pButton
+                pRipple
+                type="button"
+                icon="pi pi-angle-down"
+                class="p-button-rounded p-button-text"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
 
-<div class=" content">
-    <div class=" row">
-      <div class=" col-12 ">
-        <div class=" card course-div card-chart">
-          <div class=" card-header ">
+  <div class="flex-column justify-content-center breakpoint">
+    <h4 class="text-black-alpha-90">Welcome, John Doe</h4>
+    <div class="flex gap-4 p-2">
+      <!--  -->
+      <div class="xl:col-12 col-3 cards">
+        <div class="flex justify-content-between">
+          <div class="block p-2 col-12">
+            <div class="font-bold">Learning Times</div>
+            <div class="flex align-items-center justify-content-between pt-1">
+              <div>
+                <h5 class="text-black-alpha-90">This Week</h5>
+                <p class="text-black-alpha-90 font-bold" id="hours">20</p>
+                <h5 class="text-black-alpha-90">Hours</h5>
+              </div>
+              <div class="block pl-2">
+                <div
+                  class="flex align-items-center justify-content-center px-2"
+                  id="time"
+                >
+                  <img
+                    src="../../../assets/svg/Vectortime.svg"
+                    alt=""
+                    id="svgtime"
+                  />
+                  <p class="text-black-alpha-90" id="hrs">1.2 hours</p>
+                </div>
+                <p
+                  class="text-black-alpha-90 pl-2 align-items-center justify-content-between"
+                >
+                  vs last Week
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <h5 class="text-dark">Development>Web Development > Angular </h5>
-            <div class="mt-5 d-flex justify-content-left align-items-center">
-            <img class="logo" src="https://seeklogo.com/images/A/angular-logo-CF8B6B5B10-seeklogo.com.png" alt="" srcset="">
-            <h2 class="ml-2 text-dark ">Angular - The Complete Guide (2023 Edition)</h2>
-          </div>
-          </div>
-          <div class="card-body d-flex flex-column justify-content-left align-items-left">
-           <h6>Master Angular (formerly "Angular 2") and build awesome, reactive web apps with the successor of Angular.js</h6>
-         
-          </div>
-          <div class=" d-flex  justify-content-sm-between card-footer">
-            <h6>Created by Sudhir Bandhari</h6>
-            <div class="d-flex">
-            <button class="btn btn-lg start-div">Start</button>
-          </div>
-           </div>
+          <!-- <div class="col-7 block align-items-center">
+            <div
+              class="course flex align-items-center justify-content-between p-2 mt-1"
+            >
+              <div class="flex align-items-center justify-content-between">
+                <img
+                  src="../../../assets/svg/Vectorcourse.svg"
+                  alt=""
+                  id="svgcourse"
+                />
+                <p class="text-black-alpha-90 font-bold pl-4 pt-3">4 Course</p>
+              </div>
+              <p class="font-bold pl-2 pt-2" id="text1">Assigned</p>
+            </div>
+            <div
+              class="course2 flex align-items-center justify-content-between p-2"
+            >
+              <div class="flex align-items-center justify-content-between">
+                <img
+                  src="../../../assets/svg/vectorbadge.svg"
+                  alt=""
+                  id="svgcourse"
+                />
+                <p class="text-black-alpha-90 font-bold pl-4 pt-3">3 Badges</p>
+              </div>
+              <p class="font-bold pl-2 pt-2" id="text2">Collected</p>
+            </div>
+          </div> -->
         </div>
       </div>
-      <!-- <div class=" col-lg-4">
-        <div class=" card card-chart">
-          <div class=" card-header">
-            <h5 class=" card-category">Calendar</h5>
-            <h3 class=" card-title">
-              <i class=" tim-icons icon-send text-success"> </i> 12,100K
-            </h3>
-          </div>
-          <div class=" card-body">
-            <!-- <div class="calendar-wrapper">
-              <mat-calendar #calendar [(selected)]="selectedDate">
-              </mat-calendar>
-          </div> 
-          <p-calendar [(ngModel)]="value"></p-calendar>
+      <div class="block xl:col-12 col-3">
+        <div class="course-cards">
+          <div
+            class="course flex align-items-center justify-content-between p-2"
+          >
+            <div class="flex align-items-center justify-content-between">
+              <img
+                src="../../../assets/svg/Vectorcourse.svg"
+                alt=""
+                id="svgcourse"
+              />
+              <p class="text-black-alpha-90 font-bold pl-4">4 Course</p>
+            </div>
+            <p class="font-bold pl-2" id="text1">Assigned</p>
           </div>
         </div>
-      </div> -->
+
+        <div class="course-cards">
+          <div
+            class="course2 flex align-items-center justify-content-between p-2"
+          >
+            <div class="flex align-items-center justify-content-between">
+              <img
+                src="../../../assets/svg/vectorbadge.svg"
+                alt=""
+                id="svgcourse"
+              />
+              <p class="text-black-alpha-90 font-bold pl-4">3 Badges</p>
+            </div>
+            <p class="font-bold pl-2" id="text2">Collected</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="xl:col-12 col-6 cards">
+        <div class="block">
+          <div class="flex">
+            <p class="text-black-alpha-90 font-bold px-3" id="sklearned">
+              Skills Learned: 5
+            </p>
+          </div>
+          <div class="flex p-3">
+            <div class="skills mr-3">
+              <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
+              <img
+                src="../../../assets/svg/Vectorcheck.svg"
+                alt=""
+                id="check"
+                class="inner"
+              />
+              <img
+                src="../../../assets/svg/vectorbadge.svg"
+                alt=""
+                id="badge"
+              />
+            </div>
+            <div class="skills">
+              <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
+              <img
+                src="../../../assets/svg/Vectorcheck.svg"
+                alt=""
+                id="check"
+                class="inner"
+              />
+              <img
+                src="../../../assets/svg/vectorbadge.svg"
+                alt=""
+                id="badge"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class=" row">
-      <div class=" col-12 ">
-        <div class=" card course-div card-chart">
-          <div class=" card-header d-flex justify-content-left align-items-center">
+    <h4 class="text-black-alpha-90 py-3">Learning Modules Assigned</h4>
 
-            <h5 class="text-dark">Development>Web Development > React </h5>
+    <div class="grid gap-6 px-2">
+      <!-- Card 1 -->
+      <div class="col-6 cards">
+        <div class="flex align-items-center justify-content-around">
+          <div class="block col-8">
+            <div class="flex">
+              <div class="head-logo">
+                <img src="../../../assets/svg/angular.svg" alt="" />
+              </div>
+              <div class="block px-2">
+                <p class="text-black-alpha-90 font-medium" id="beginner">
+                  Beginner
+                </p>
+                <p class="text-black-alpha-90 font-semibold">
+                  Angular- The Complete Guide
+                </p>
+                <p class="text-black-alpha-90 assignedBy">
+                  Assigned By <Span class="font-medium">John Doe</Span>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-black-alpha-90 font-normal description">
+                Master angular(Former Angular 2) and build awesome, reactive web
+                apps with the successor of Angular JS with the successor of
+                Angular JS.
+              </p>
+            </div>
+            <div class="block">
+              <button
+                pButton
+                type="button"
+                label="Go to course"
+                class="w-100 btnn"
+              ></button>
+            </div>
           </div>
-          <div class="card-body d-flex justify-content-left align-items-center">
-            <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" srcset="">
-            <h2 class="ml-2 text-dark ">React - The Complete Guide (2023 Edition)</h2>
+          <div
+            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+          >
+            <p class="text-center status-text">Start Learning</p>
+            <div class="badge1">
+              <img
+                src="../../../assets/svg/Groupbadge1.svg"
+                alt=""
+                class="svglogo"
+              />
+            </div>
+            <p class="text-center statusmsg">
+              Lets complete the stages and earn your badge.
+            </p>
+            <p
+              class="text-white-600 bg-green-600 text-center border-round-md rem-status"
+            >
+              14 Days to Complete
+            </p>
+            <p class="text-black-alpha-90 text-center assignedOn">
+              Assigned On: <span class="font-semibold">02-02-2023</span>
+            </p>
           </div>
-          <div class=" d-flex  justify-content-sm-between  card-footer">
-            <h6>Created by Ankit Bhasin</h6>
-            <div class="d-flex">
-            <button class="btn btn-lg start-div">Start</button>
-          </div>
-           </div>
         </div>
       </div>
-      <div class=" row">
-        <div class=" col-12 ">
-          <div class=" card course-div card-chart">
-            <div class=" card-header d-flex justify-content-left align-items-center">
-  
-              <h5 class="text-dark">Development>Web Development > Typescript</h5>
+
+      <!-- Card 2 -->
+      <div class="col-6 cards">
+        <div class="flex align-items-center justify-content-around">
+          <div class="block col-8">
+            <div class="flex">
+              <div class="head-logo">
+                <img src="../../../assets/svg/angular.svg" alt="" />
+              </div>
+              <div class="block px-2">
+                <p class="text-black-alpha-90 font-medium" id="beginner">
+                  Beginner
+                </p>
+                <p class="text-black-alpha-90 font-semibold">
+                  Angular- The Complete Guide
+                </p>
+                <p class="text-black-alpha-90 assignedBy">
+                  Assigned By <Span class="font-medium">John Doe</Span>
+                </p>
+              </div>
             </div>
-            <div class="card-body d-flex justify-content-left align-items-center">
-              <img class="logo" src="data:image/png;base64,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" alt="" srcset="">
-              <h2 class="ml-2 text-dark ">Typescript - The Complete Developer's Guide (2023 Edition) </h2>
+            <div class="block">
+              <p class="text-black-alpha-90 font-normal description">
+                Master angular(Former Angular 2) and build awesome, reactive web
+                apps with the successor of Angular JS with the successor of
+                Angular JS.
+              </p>
             </div>
-            <div class=" d-flex  justify-content-sm-between  card-footer">
-              <h6>Created by Shivam Rao</h6>
-              <div class="d-flex">
-              <button class="btn btn-lg start-div" routerLink= "/video-panel" routerLinkActive="active">Start</button>
+            <div class="block">
+              <button
+                pButton
+                type="button"
+                label="Go to course"
+                class="w-100 btnn"
+              ></button>
             </div>
-             </div>
+          </div>
+          <div
+            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+          >
+            <p class="text-center status-text">Making Progress!</p>
+            <div class="badge1">
+              <img src="../../../assets/svg/Snail.svg" alt="" class="svglogo" />
+            </div>
+            <p class="text-center statusmsg">
+              You have completed the first stage!
+            </p>
+            <div>
+              <p class="text-black-alpha-90 text-right" id="percent">33%</p>
+              <p-progressBar [value]="33" id="progress"></p-progressBar>
+              <p
+                class="text-black-alpha-90 text-center font-semibold remaining"
+              >
+                8 days remaining
+              </p>
+            </div>
+            <p class="text-black-alpha-90 text-center pt-2 assignedOn">
+              Assigned On: <span class="font-semibold">02-02-2023</span>
+            </p>
           </div>
         </div>
-        <!-- <div class=" col-lg-4">
-          <div class=" card card-chart">
-            <div class=" card-header">
-              <h5 class=" card-category">Calendar</h5>
-              <h3 class=" card-title">
-                <i class=" tim-icons icon-send text-success"> </i> 12,100K
-              </h3>
-            </div>
-            <div class=" card-body">
-              <!-- <div class="calendar-wrapper">
-                <mat-calendar #calendar [(selected)]="selectedDate">
-                </mat-calendar>
-            </div> 
-            <p-calendar [(ngModel)]="value"></p-calendar>
-            </div>
-          </div>
-        </div> -->
       </div>
-      <!-- <div class=" col-lg-4">
-        <div class=" card card-chart">
-          <div class=" card-header">
-            <h5 class=" card-category">Calendar</h5>
-            <h3 class=" card-title">
-              <i class=" tim-icons icon-send text-success"> </i> 12,100K
-            </h3>
+
+      <!-- Card 3 -->
+      <div class="col-6 cards">
+        <div class="flex align-items-center justify-content-around">
+          <div class="block col-8">
+            <div class="flex">
+              <div class="head-logo">
+                <img src="../../../assets/svg/angular.svg" alt="" />
+              </div>
+              <div class="block px-2">
+                <p class="text-black-alpha-90 font-medium" id="beginner">
+                  Beginner
+                </p>
+                <p class="text-black-alpha-90 font-semibold">
+                  Angular- The Complete Guide
+                </p>
+                <p class="text-black-alpha-90 assignedBy">
+                  Assigned By <Span class="font-medium">John Doe</Span>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-black-alpha-90 font-normal description">
+                Master angular(Former Angular 2) and build awesome, reactive web
+                apps with the successor of Angular JS with the successor of
+                Angular JS.
+              </p>
+            </div>
+            <div class="block">
+              <button
+                pButton
+                type="button"
+                label="Go to course"
+                class="w-100 btnn"
+              ></button>
+            </div>
           </div>
-          <div class=" card-body">
-            <!-- <div class="calendar-wrapper">
-              <mat-calendar #calendar [(selected)]="selectedDate">
-              </mat-calendar>
-          </div> 
-          <p-calendar [(ngModel)]="value"></p-calendar>
+          <div
+            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+          >
+            <p class="text-center status-text">Running fast!</p>
+            <div class="badge1">
+              <img
+                src="../../../assets/svg/Rabbit.svg"
+                alt=""
+                class="svglogo"
+              />
+            </div>
+            <p class="text-center statusmsg py-2">
+              You have completed the second stageko!
+            </p>
+            <div>
+              <p class="text-black-alpha-90 text-right" id="percent">50%</p>
+              <p-progressBar [value]="50" id="progress"></p-progressBar>
+              <p
+                class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
+              >
+                8 days remaining
+              </p>
+            </div>
+            <p class="text-black-alpha-90 text-center assignedOn">
+              Assigned On: <span class="font-semibold">02-02-2023</span>
+            </p>
           </div>
         </div>
-      </div> -->
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-6 cards">
+        <div class="flex align-items-center justify-content-around">
+          <div class="block col-8">
+            <div class="flex">
+              <div class="head-logo">
+                <img src="../../../assets/svg/angular.svg" alt="" />
+              </div>
+              <div class="block px-2">
+                <p class="text-black-alpha-90 font-medium" id="beginner">
+                  Beginner
+                </p>
+                <p class="text-black-alpha-90 font-semibold">
+                  Angular- The Complete Guide
+                </p>
+                <p class="text-black-alpha-90 assignedBy">
+                  Assigned By <Span class="font-medium">John Doe</Span>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-black-alpha-90 font-normal description">
+                Master angular(Former Angular 2) and build awesome, reactive web
+                apps with the successor of Angular JS with the successor of
+                Angular JS.
+              </p>
+            </div>
+            <div class="block">
+              <button
+                pButton
+                type="button"
+                label="Go to course"
+                class="w-100 btnn"
+              ></button>
+            </div>
+          </div>
+          <div
+            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+          >
+            <p class="text-center status-text">Let’s Celebrate!</p>
+            <div class="badge1">
+              <img src="../../../assets/svg/Badge.svg" alt="" id="svgbadge" />
+            </div>
+            <p class="text-center statusmsg py-1">You have earned the badge</p>
+            <div>
+              <p class="text-black-alpha-90 text-right" id="percent">99%</p>
+              <p-progressBar [value]="99" id="progress"></p-progressBar>
+              <p
+                class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
+              >
+                2 days remaining
+              </p>
+            </div>
+            <p class="text-black-alpha-90 text-center assignedOn">
+              Assigned On: <span class="font-semibold">02-02-2023</span>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- <div class=" row">
-      <div class=" col-lg-4">
-        <div class=" card card-chart">
-          <div class=" card-header">
-            <h5 class=" card-category"></h5>
-            <h3 class=" card-title">
-              <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
-            </h3>
-          </div>
-          <div class=" card-body">
-            <div class=" chart-area"><canvas id="chartLineRed"> </canvas></div>
-          </div>i 
-        </div>
-      </div>
-       <div class=" col-lg-4">
-        <div class=" card card-chart">
-          <div class=" card-header">
-            <h5 class=" card-category">Daily Sales</h5>
-            <h3 class=" card-title">
-              <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
-            </h3>
-          </div>
-          <div class=" card-body">
-            <div class=" chart-area"><canvas id="CountryChart"> </canvas></div>
-          </div>
-        </div>
-      </div> 
-      
-    </div>-->
-    
-  </div>    
-  
+  </div>
+</div>
