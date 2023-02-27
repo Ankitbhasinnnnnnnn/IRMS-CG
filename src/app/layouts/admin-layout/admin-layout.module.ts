@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { AdminLayoutRoutes } from './admin-layout.routing';
-import { DashboardComponent } from '../../Components/dashboard/dashboard.component';
+
 import { MySkillComponent } from 'src/app/Components/my-skill/my-skill.component';
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 import { UserDetailsComponent } from 'src/app/Components/user-details/user-details.component';
@@ -14,7 +14,6 @@ import { ComponentsModule } from '../../Components/component.module';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
     MySkillComponent,
     UserDetailsComponent,
 
