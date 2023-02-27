@@ -184,11 +184,14 @@ display: flex;
 justify-content: center;
 }
 
-#memberText{
+#alreadyMemberText{
   color:#28519E;
 
 }
 #signUpBtn{
   background-color: #002C3F;
   color: whitesmoke;
+}
+a:hover{
+  cursor: pointer;
 }

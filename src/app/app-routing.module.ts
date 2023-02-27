@@ -4,9 +4,10 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { EmailVerificationComponent } from './Components/email-verification/email-verification.component';
 import { LoginComponent } from './Components/login/login.component';
 import { SignupComponent } from './Components/signup/signup.component';
+import { VideoPanelComponent } from './Components/video-panel/video-panel.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import { VideoPanelComponent } from './Components/video-panel/video-panel.component';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent },

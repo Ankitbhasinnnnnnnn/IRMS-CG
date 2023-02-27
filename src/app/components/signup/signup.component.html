@@ -33,13 +33,13 @@
            </div>
 
           <!-- for password input -->
-           <div class="emailLabel w-100 text-left py-2">
+           <div class="emailLabel w-100 text-left pt-4 pb-5">
             <label for="passwordInput" class="text-base">Password</label>
              <input id="passwordInput" type="password" aria-describedby="username1-help" pInputText class="w-100 px-3"/>
            </div>
 
             <button pButton pRipple type="button" class="p-button w-100 mt-2" id="signUpBtn">Sign Up</button>
-            <a id="memberText" href="#">Already a Member </a>
+            <a id="alreadyMemberText" (click)="redirectToLoginPage()" class="block pt-3">Already have an account Login </a>
 
           </div>
           

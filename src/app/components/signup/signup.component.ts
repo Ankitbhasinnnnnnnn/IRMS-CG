@@ -31,4 +31,9 @@ signup(email:any, password:any) {
     
   });
 }
+
+redirectToLoginPage(){
+  this.approuting.navigate(['login'])
+}
+
 }

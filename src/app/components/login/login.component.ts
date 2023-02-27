@@ -25,4 +25,11 @@ public LoginCreditianls: object = {};
       }
     });
   }
+  forgetPassword(){
+    // this.route.navigate(['']) // this is for the forget password to na igate to that page
+  }
+
+  redirectToRegisterPage(){
+    this.route.navigate(['register'])
+  }
 }
