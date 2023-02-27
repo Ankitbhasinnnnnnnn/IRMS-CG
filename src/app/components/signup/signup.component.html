@@ -1,6 +1,6 @@
 <div class="grid flex justify-content-center align-items-center p-3">
   <div
-    class="md:col-8 sm:col-12 lg:col-6 flex justify-content-center align-items-center flex-wrap main-div"
+    class="md:col-8 sm:col-12 lg:col-8 flex justify-content-center align-items-center flex-wrap main-div"
   >
     <div
       class="col-6 flex flex-column align-items-center justify-content-center left"
@@ -38,7 +38,7 @@
              <input id="passwordInput" type="password" aria-describedby="username1-help" pInputText class="w-100 px-3"/>
            </div>
 
-            <button pButton pRipple type="button" class="p-button w-100 mt-2" id="signUpBtn">Sign Up</button>
+            <button pButton pRipple type="button" class="p-button w-100 mt-2" id="signUpBtn" routerLink="/verify" rou>Sign Up</button>
             <a id="alreadyMemberText" (click)="redirectToLoginPage()" class="block pt-3">Already have an account Login </a>
 
           </div>
