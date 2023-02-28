@@ -22,6 +22,7 @@ public LoginCreditianls: object = {};
     this.loginservice.LoginUser(this.LoginCreditianls).subscribe((resp:any) => {
       if(resp.isValid == true) {
       this.route.navigate(["/dashboard"]);
+      sessionStorage.setItem("Email", email);
       }
     });
   }

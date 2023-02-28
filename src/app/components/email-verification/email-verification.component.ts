@@ -26,8 +26,8 @@ this.registerservice.VerifyOtp(creditianls).subscribe((resp:any) => {
 
 if(resp.isOTPVerified == 'true'  ) {
   console.log(resp);
-  this.routing.navigate(["/dashboard"])
-  this.value = 'dashboard'
+  this.routing.navigate(["/login"])
+  this.value = 'login'
 console.log(this.value);
 }
 
