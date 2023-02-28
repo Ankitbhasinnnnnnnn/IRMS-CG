@@ -29,11 +29,11 @@
 
   <div class="flex-column justify-content-center breakpoint">
     <h4 class="text-black-alpha-90">Welcome, John Doe</h4>
-    <div class="flex gap-4 p-2">
+    <div class="row align-items-center justify-content-around">
       <!--  -->
-      <div class="xl:col-12 col-3 cards">
+      <div class="col-md-3 skill-cards">
         <div class="flex justify-content-between">
-          <div class="block p-2 col-12">
+          <div class="block col-12">
             <div class="font-bold">Learning Times</div>
             <div class="flex align-items-center justify-content-between pt-1">
               <div>
@@ -92,7 +92,7 @@
           </div> -->
         </div>
       </div>
-      <div class="block xl:col-12 col-3">
+      <div class="d-block col-md-3">
         <div class="course-cards">
           <div
             class="course flex align-items-center justify-content-between p-2"
@@ -127,15 +127,15 @@
       </div>
 
       <!-- SKILLS -->
-      <div class="xl:col-12 col-6 cards">
+      <div class="col-md-5 skill-cards">
         <div class="block">
           <div class="flex">
-            <p class="text-black-alpha-90 font-bold px-3" id="sklearned">
+            <p class="text-black-alpha-90 font-bold px-3 py-2" id="sklearned">
               Skills Learned: 5
             </p>
           </div>
-          <div class="flex p-3">
-            <div class="skills mr-3">
+          <div class="flex p-2 gap-3">
+            <div class="skills" id="angular-skill">
               <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
               <img
                 src="../../../assets/svg/Vectorcheck.svg"
@@ -149,19 +149,18 @@
                 id="badge"
               />
             </div>
+
             <div class="skills">
-              <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
-              <img
-                src="../../../assets/svg/Vectorcheck.svg"
-                alt=""
-                id="check"
-                class="inner"
-              />
-              <img
-                src="../../../assets/svg/vectorbadge.svg"
-                alt=""
-                id="badge"
-              />
+              <img src="../../../assets/skills/skills-1.svg" alt="" />
+            </div>
+            <div class="skills">
+              <img src="../../../assets/skills/skills-2.svg" alt="" />
+            </div>
+            <div class="skills">
+              <img src="../../../assets/skills/skills-3.svg" alt="" />
+            </div>
+            <div class="skills">
+              <img src="../../../assets/skills/skills-4.svg" alt="" />
             </div>
           </div>
         </div>
@@ -169,9 +168,9 @@
     </div>
     <h4 class="text-black-alpha-90 py-3">Learning Modules Assigned</h4>
 
-    <div class="grid gap-6 px-2">
+    <div class="row gap-4 pl-md-4">
       <!-- Card 1 -->
-      <div class="col-6 cards">
+      <div class="col-md-5 cards">
         <div class="flex align-items-center justify-content-around">
           <div class="block col-8">
             <div class="flex">
@@ -233,7 +232,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-6 cards">
+      <div class="col-md-5 cards">
         <div class="flex align-items-center justify-content-around">
           <div class="block col-8">
             <div class="flex">
@@ -273,7 +272,11 @@
           >
             <p class="text-center status-text">Making Progress!</p>
             <div class="badge1">
-              <img src="../../../assets/svg/Snail.svg" alt="" class="svglogo" />
+              <img
+                src="../../../assets/svg/progress.svg"
+                alt=""
+                class="svglogo"
+              />
             </div>
             <p class="text-center statusmsg">
               You have completed the first stage!
@@ -295,7 +298,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-6 cards">
+      <div class="col-md-5 cards">
         <div class="flex align-items-center justify-content-around">
           <div class="block col-8">
             <div class="flex">
@@ -342,7 +345,7 @@
               />
             </div>
             <p class="text-center statusmsg py-2">
-              You have completed the second stageko!
+              You have completed the second stage!
             </p>
             <div>
               <p class="text-black-alpha-90 text-right" id="percent">50%</p>
@@ -361,7 +364,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-6 cards">
+      <div class="col-md-5 cards">
         <div class="flex align-items-center justify-content-around">
           <div class="block col-8">
             <div class="flex">
@@ -413,6 +416,68 @@
                 2 days remaining
               </p>
             </div>
+            <p class="text-black-alpha-90 text-center assignedOn">
+              Assigned On: <span class="font-semibold">02-02-2023</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-5 cards">
+        <div class="flex align-items-center justify-content-around">
+          <div class="block col-8">
+            <div class="flex">
+              <div class="head-logo">
+                <img src="../../../assets/svg/angular.svg" alt="" />
+              </div>
+              <div class="block px-2">
+                <p class="text-black-alpha-90 font-medium" id="beginner">
+                  Beginner
+                </p>
+                <p class="text-black-alpha-90 font-semibold">
+                  Angular- The Complete Guide
+                </p>
+                <p class="text-black-alpha-90 assignedBy">
+                  Assigned By <Span class="font-medium">John Doe</Span>
+                </p>
+              </div>
+            </div>
+            <div class="block">
+              <p class="text-black-alpha-90 font-normal description">
+                Master angular(Former Angular 2) and build awesome, reactive web
+                apps with the successor of Angular JS with the successor of
+                Angular JS.
+              </p>
+            </div>
+            <div class="block">
+              <button
+                pButton
+                type="button"
+                label="Go to course"
+                class="w-100 btnn"
+              ></button>
+            </div>
+          </div>
+          <div
+            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+          >
+            <p class="text-center status-text">Running late!</p>
+            <div class="badge1">
+              <img
+                src="../../../assets/svg/alaram.svg"
+                alt=""
+                class="svglogo"
+              />
+            </div>
+            <p class="text-center statusmsg">
+              Lets complete the stages and earn your badge.
+            </p>
+            <p
+              class="text-white-600 bg-red-600 text-center border-round-md rem-status"
+            >
+              Overdue 5 days
+            </p>
             <p class="text-black-alpha-90 text-center assignedOn">
               Assigned On: <span class="font-semibold">02-02-2023</span>
             </p>
