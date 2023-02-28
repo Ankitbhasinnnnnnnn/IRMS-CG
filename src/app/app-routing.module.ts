@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'register', component: SignupComponent },
   { path: 'verify', component: EmailVerificationComponent },
   { path: 'video-panel', component: VideoPanelComponent },
-  { path: '', redirectTo: '/register', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   {
     path: 'dashboard',
