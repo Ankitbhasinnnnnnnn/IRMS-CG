@@ -8,6 +8,7 @@ import { VideoPanelComponent } from './Components/video-panel/video-panel.compon
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { NewPasswordComponent } from './Components/new-password/new-password.component';
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'verify', component: EmailVerificationComponent },
   { path: 'video-panel', component: VideoPanelComponent },
   {path: 'forgot-password', component:  ForgotPasswordComponent},
+  {path: 'new-password' , component: NewPasswordComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   {
