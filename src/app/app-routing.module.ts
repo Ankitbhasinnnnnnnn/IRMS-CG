@@ -7,13 +7,14 @@ import { SignupComponent } from './Components/signup/signup.component';
 import { VideoPanelComponent } from './Components/video-panel/video-panel.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: SignupComponent },
   { path: 'verify', component: EmailVerificationComponent },
   { path: 'video-panel', component: VideoPanelComponent },
+  {path: 'forgot-password', component:  ForgotPasswordComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   {

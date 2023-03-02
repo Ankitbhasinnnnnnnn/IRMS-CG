@@ -16,6 +16,8 @@ import { DividerModule } from 'primeng/divider';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
+import {SelectButtonModule} from 'primeng/selectbutton';
+
 
 @NgModule({
   imports: [
@@ -29,13 +31,15 @@ import { MenuModule } from 'primeng/menu';
     DividerModule,
     ProgressBarModule,
     ToastModule,
-    MenuModule
+    MenuModule,
+    SelectButtonModule
   ],
   declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
+    
   ],
   exports: [FooterComponent, NavbarComponent, SidebarComponent],
 })

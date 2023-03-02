@@ -13,13 +13,16 @@ export class DashboardComponent implements OnInit {
 gfg:any = '';
 name: string = '';
 email: string = '';
-stateOptions = [
-  { label: 'Off', value: 'off' },
-  { label: 'On', value: 'on' },
-];
+value1: any = 'off';
+stateOptions: any[];
 
 
-constructor(private messageService: MessageService,private primengConfig: PrimeNGConfig) {}
+constructor(private messageService: MessageService,private primengConfig: PrimeNGConfig) {
+  this.stateOptions = [
+    { label: 'My Learning', value: 'My Learning' },
+    { label: 'Leave Management', value: 'Leave Management' },
+  ];
+}
 ngOnInit(): void {
   this.email = sessionStorage?.getItem("Email") ?? "";
  

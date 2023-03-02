@@ -58,6 +58,14 @@ img {
   border-radius: 4px;
   background: #ffffff;
 }
+:host::ng-deep .p-button {
+  background-color: #2D4A56 !important;
+  color: white !important
+}
+:host::ng-deep .p-highlight {
+  background-color: #FFB81C !important;
+  color: white !important
+}
 
 #logo {
   width: 10.313rem;

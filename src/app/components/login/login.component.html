@@ -37,7 +37,7 @@
            </div>
            
             <button pButton pRipple type="button" class="p-button w-100 mt-2" id="signUpBtn" (click)="LoginUser(email.value, password.value)">Login</button>
-            <a id="forgetPassword" (click)="forgetPassword()" class="loginText block pt-3">Forgot password? </a>
+            <a id="forgetPassword" (click)="forgetPassword()" routerLink="/forgot-password" class="loginText block pt-3">Forgot password? </a>
 
             <a id="firstTimeUser" (click)="redirectToRegisterPage()" class="loginText block pt-4">Sign Up if you are a first time user  </a>
 
