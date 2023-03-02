@@ -1,5 +1,5 @@
 :host ::ng-deep .p-card.p-component {
-  height: 4rem;
+  
   padding: 0px;
   border-radius: 0;
 }
@@ -244,7 +244,20 @@ img {
 .breakpoint {
   padding: 1rem 1rem;
 }
-
+.navbar-btn {
+ color: white !important;
+  background: #2D4A56 !important;
+}
+:host::ng-deep .p-card-body{
+  background-color: #002C3E !important;
+}
+.notification-img {
+  height: 2rem;
+  
+}
+.vr {
+  background-color: white !important;
+}
 // @media screen and (min-width: 1400px) {
 //   .breakpoint {
 //     padding: 1rem 19.5rem;
@@ -259,4 +272,11 @@ img {
 .dashboard-body {
   justify-content: inherit !important;
 
+}
+.client-name {
+  color: white !important;
+}
+:host::ng-deep .p-menu.p-menu-overlay {
+  top: 50px !important;
+    left: -140px !important;
 }

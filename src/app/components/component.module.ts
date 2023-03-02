@@ -15,6 +15,8 @@ import { RippleModule } from 'primeng/ripple';
 import { DividerModule } from 'primeng/divider';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
+import { MenuModule } from 'primeng/menu';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -27,6 +29,7 @@ import { ToastModule } from 'primeng/toast';
     DividerModule,
     ProgressBarModule,
     ToastModule,
+    MenuModule
   ],
   declarations: [
     FooterComponent,
