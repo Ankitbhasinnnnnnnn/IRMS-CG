@@ -1,5 +1,4 @@
 :host ::ng-deep .p-card.p-component {
-  
   padding: 0px;
   border-radius: 0;
 }
@@ -58,13 +57,13 @@ img {
   border-radius: 4px;
   background: #ffffff;
 }
-:host::ng-deep .p-button {
-  background-color: #2D4A56 !important;
-  color: white !important
-}
+// :host::ng-deep .p-button {
+//   background-color: #2d4a56 !important;
+//   color: white !important;
+// }
 :host::ng-deep .p-highlight {
-  background-color: #FFB81C !important;
-  color: white !important
+  background-color: #ffb81c !important;
+  color: white !important;
 }
 
 #logo {
@@ -108,6 +107,7 @@ img {
 }
 
 .course {
+  margin-top: 0.2rem;
   height: 4.2rem;
   background-color: #e1ebf8;
   border-radius: 0.2rem;
@@ -175,8 +175,8 @@ img {
 }
 .right {
   background-color: rgba(184, 182, 182, 0.2);
-  width: 10.063rem;
-  height: 13.75rem;
+  // width: 10.063rem;
+  // height: 13.75rem;
 }
 .badge1 {
   width: 4rem;
@@ -184,7 +184,9 @@ img {
 }
 .btnn {
   height: 33px;
-  background: #28519e;
+
+  background-color: #2d4a56 !important;
+  color: white !important;
   box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.15), 0px 2px 6px rgba(0, 0, 0, 0.15);
   border-radius: 4px !important;
   margin-top: 0.5rem;
@@ -229,7 +231,7 @@ img {
 }
 .rem-status {
   margin-top: 0.5rem;
-  width: 8.313rem;
+  // width: 8.313rem;
   height: 1.688rem;
   font-size: 0.75rem;
   text-align: center;
@@ -249,19 +251,18 @@ img {
 .description {
   font-size: 0.875rem;
 }
-.breakpoint {
-  padding: 1rem 1rem;
-}
+// .breakpoint {
+//   padding: 1rem 1rem;
+// }
 .navbar-btn {
- color: white !important;
-  background: #2D4A56 !important;
+  color: white !important;
+  background: #2d4a56 !important;
 }
-:host::ng-deep .p-card-body{
-  background-color: #002C3E !important;
+:host::ng-deep .p-card-body {
+  background-color: #002c3e !important;
 }
 .notification-img {
   height: 2rem;
-  
 }
 .vr {
   background-color: white !important;
@@ -279,12 +280,22 @@ img {
 // }
 .dashboard-body {
   justify-content: inherit !important;
-
 }
 .client-name {
   color: white !important;
 }
 :host::ng-deep .p-menu.p-menu-overlay {
   top: 50px !important;
-    left: -140px !important;
+  left: -140px !important;
+}
+.media-breakpoint {
+  //padding-left: 3rem;
+  align-content: start;
+  // justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .media-breakpoint {
+    padding-left: 6rem;
+    padding-right: 0rem;
+  }
 }
