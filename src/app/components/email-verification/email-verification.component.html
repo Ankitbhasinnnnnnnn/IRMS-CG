@@ -25,13 +25,14 @@
           <h3 class="text-black-alpha-90 font-bold">Welcome to ITMS Portal</h3>
           <div class="flex my-4">
             <button
+            routerLink="/register"
               pButton
               pRipple
               type="button"
               icon="pi pi-arrow-left"
               class="p-button-rounded p-button-text"
             ></button>
-            <p id="email" class="para">email@email.com</p>
+            <p id="email" class="para">{{email}}</p>
           </div>
           <h3 class="font-bold text-black-alpha-90 text-left">Enter Code</h3>
           <input

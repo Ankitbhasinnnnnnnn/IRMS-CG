@@ -8,9 +8,11 @@ import { RegisterService } from 'src/app/Services/register.service';
 })
 export class EmailVerificationComponent implements OnInit {
   public value:string = "";
+  public email: string = '';
   constructor(private registerservice: RegisterService , private routing:Router ) { }
 
   ngOnInit(): void {
+    this.email = RegisterService.getEmail();
   }
   VerfiyOtp(otp:string) {
     debugger;
