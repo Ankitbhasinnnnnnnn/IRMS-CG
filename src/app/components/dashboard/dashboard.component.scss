@@ -57,13 +57,15 @@ img {
   border-radius: 4px;
   background: #ffffff;
 }
-// :host::ng-deep .p-button {
-//   background-color: #2d4a56 !important;
-//   color: white !important;
-// }
+:host::ng-deep .p-button {
+  background-color: #2d4a56 !important;
+  color: white !important;
+  border: 0 !important;
+}
 :host::ng-deep .p-highlight {
   background-color: #ffb81c !important;
   color: white !important;
+  border: 0 !important;
 }
 
 #logo {

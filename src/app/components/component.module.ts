@@ -17,6 +17,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import { NewPasswordComponent } from './new-password/new-password.component';
+
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import {SelectButtonModule} from 'primeng/selectbutton';
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
+    NewPasswordComponent,
+    
     
   ],
   exports: [FooterComponent, NavbarComponent, SidebarComponent],
