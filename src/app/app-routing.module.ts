@@ -9,7 +9,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { NewPasswordComponent } from './Components/new-password/new-password.component';
-import { LeaveComponent } from './components/leave/leave.component';
+
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'forgot-password', component:  ForgotPasswordComponent},
   {path: 'new-password' , component: NewPasswordComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  {path: 'leave', component: LeaveComponent},
+ 
 
   {
     path: 'dashboard',
