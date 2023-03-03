@@ -20,6 +20,7 @@ import {SelectButtonModule} from 'primeng/selectbutton';
 import { NewPasswordComponent } from './new-password/new-password.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -41,6 +42,7 @@ import { NewPasswordComponent } from './new-password/new-password.component';
     SidebarComponent,
     DashboardComponent,
     NewPasswordComponent,
+    
     
   ],
   exports: [FooterComponent, NavbarComponent, SidebarComponent],
