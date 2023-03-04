@@ -24,6 +24,7 @@ signup(email:any, password:any) {
     console.log(resp.isRegistered);
     
     if(resp.isRegistered == true) {
+      localStorage.setItem("otp", resp.otp);
       this.approuting.navigate(["/verify"]);
     }
     RegisterService.setEmail(email);

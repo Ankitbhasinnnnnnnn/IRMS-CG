@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/Services/register.service';
+import * as md5 from 'md5';
+
 @Component({
   selector: 'app-email-verification',
   templateUrl: './email-verification.component.html',
@@ -24,15 +26,20 @@ export class EmailVerificationComponent implements OnInit {
       otp: otp
     }
     
-this.registerservice.VerifyOtp(creditianls).subscribe((resp:any) => {
 
-if(resp.isOTPVerified == 'true'  ) {
-  console.log(resp);
+const hashedOTP = md5(otp);
+const localStorageOTP = localStorage.getItem("otp");
+if(hashedOTP == localStorageOTP) {
+  console.log("OTP verified");
+  
   this.routing.navigate(["/login"])
   this.value = 'login'
 console.log(this.value);
 }
+else{
+  alert("OTP cannot be verified!!")
+}
 
-});
+
   }
 }
