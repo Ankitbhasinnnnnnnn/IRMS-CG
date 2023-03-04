@@ -16,8 +16,9 @@ import { DividerModule } from 'primeng/divider';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
-import {SelectButtonModule} from 'primeng/selectbutton';
-
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { TopHeaderComponent } from './top-header/top-header.component';
+import { LeaveManagementComponent } from './leave-management/leave-management.component';
 
 @NgModule({
   imports: [
@@ -32,14 +33,15 @@ import {SelectButtonModule} from 'primeng/selectbutton';
     ProgressBarModule,
     ToastModule,
     MenuModule,
-    SelectButtonModule
+    SelectButtonModule,
   ],
   declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
-    
+    TopHeaderComponent,
+    LeaveManagementComponent,
   ],
   exports: [FooterComponent, NavbarComponent, SidebarComponent],
 })
