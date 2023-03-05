@@ -1,1 +1,85 @@
-<app-top-header></app-top-header>
+<app-top-header class="p-0"></app-top-header>
+<div class="w-100 d-flex align-items-center justify-content-center mt-4">
+  <div class="btn-request-leave">
+    <h4 class="text-black" id="title">My Leave Request</h4>
+    <div
+      class="d-flex align-items-center justify-content-center btn-request-time-off"
+    >
+      <img src="../../../assets/svg/Request_Time_off.svg" alt="" />
+      <p>Request Time Off</p>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex align-items-center justify-content-center mt-2">
+  <!-- <h2>Leave Management</h2> -->
+  <div class="card">
+    <p-table [value]="products1" selectionMode="single">
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="Month">
+            Month <p-sortIcon field="code"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Starting">
+            Starting <p-sortIcon field="name"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Ending">
+            Ending <p-sortIcon field="category"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Days">
+            Days <p-sortIcon field="quantity"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Reason">
+            Reason <p-sortIcon field="quantity"></p-sortIcon>
+          </th>
+          <th pSortableColumn="Approved By">
+            Approved By <p-sortIcon field="quantity"></p-sortIcon>
+          </th>
+          <th pSortableColumn="request">
+            Request Sent to <p-sortIcon field="quantity"></p-sortIcon>
+          </th>
+          <th pSortableColumn="status">
+            Status <p-sortIcon field="quantity"></p-sortIcon>
+          </th>
+          <th pSortableColumn="action">
+            Action <p-sortIcon field="price"></p-sortIcon>
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-product>
+        <tr>
+          <td>{{ product.code }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.code }}</td>
+          <td>{{ product.name }}</td>
+          <td class="align-items-center justify-content-center">
+            <div class="status">
+              {{ product.category }}
+            </div>
+          </td>
+          <td class="text-danger">{{ product.rating }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="side-bar" (click)="visibleSidebar = true">
+    <img src="../../../assets/svg/Holiday_icon.svg" alt="" />
+    <p class="m-0">Holiday List</p>
+  </div>
+  <p-sidebar [(visible)]="visibleSidebar" position="right" [baseZIndex]="10000">
+    <!-- <ng-template pTemplate="header">Holiday List</ng-template> -->
+     
+    <ng-template pTemplate="content">
+      <div class="d-flex">
+        <img src="../../../assets/svg/Holiday_icon.svg" alt="" />
+        <h6>Holiday List</h6>
+      </div>
+    </ng-template>
+     
+    <ng-template pTemplate="footer">Footer Content</ng-template>
+  </p-sidebar>
+</div>

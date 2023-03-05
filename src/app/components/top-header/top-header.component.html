@@ -9,6 +9,8 @@
             [options]="stateOptions"
             optionLabel="label"
             optionValue="value"
+            styleClass="toogle-color"
+            (onOptionClick)="redirectToLoginPage($event.option.value)"
           ></p-selectButton>
         </div>
         <div class="flex align-items-center justify-content-between">

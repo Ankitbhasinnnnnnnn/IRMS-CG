@@ -1,0 +1,80 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+:host::ng-deep .card {
+  width: 92%;
+  height: 40%;
+  border: none;
+  background-color: #2d4a56 !important;
+}
+:host::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  background-color: rgb(0, 44, 62) !important;
+  color: whitesmoke;
+}
+:host::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  border: none;
+}
+:host::ng-deep .p-sidebar-right {
+  width: 26rem;
+}
+.btn-request-leave {
+  display: flex;
+  width: 92%;
+}
+p {
+  margin: 0;
+}
+.btn-request-time-off {
+  cursor: pointer;
+  border-radius: 0.3rem;
+  width: 10.8125rem;
+  background-color: #28519e;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+}
+// :host::ng-deep .pi-sort-alt:before {
+//   content: "";
+//   background: url(../../../assets/svg/Vector.svg);
+//   color: red;
+// }
+// :host::ng-deep .pi-sort-alt:before {
+//   padding-top: 0.4rem;
+//   padding-bottom: 0.4rem;
+//   padding-left: 0.4rem;
+//   padding-right: 0.4rem;
+//   content: "";
+//   background-image: url(../../../assets/svg/Vector.svg);
+
+//   background-repeat: no-repeat;
+//   position: relative;
+// }
+#title {
+  width: 92%;
+}
+.status {
+  background-color: rgba(233, 145, 9, 0.1);
+  color: #dc6e09;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+}
+.side-bar {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 8px;
+  position: absolute;
+  width: 147px;
+  height: 40px;
+  right: -54px;
+  top: 358.5px;
+  background: #002c3f;
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 15%);
+  border-radius: 0px 0px 4px 4px;
+  transform: rotate(90deg);
+}

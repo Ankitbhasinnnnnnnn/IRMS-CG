@@ -17,6 +17,8 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { TableModule } from 'primeng/table';
+import { SidebarModule } from 'primeng/sidebar';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { LeaveManagementComponent } from './leave-management/leave-management.component';
 
@@ -34,6 +36,8 @@ import { LeaveManagementComponent } from './leave-management/leave-management.co
     ToastModule,
     MenuModule,
     SelectButtonModule,
+    TableModule,
+    SidebarModule,
   ],
   declarations: [
     FooterComponent,
