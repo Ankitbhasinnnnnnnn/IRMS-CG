@@ -36,6 +36,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     AuthLayoutComponent,
     VideoPanelComponent,
     ForgotPasswordComponent,
+    leave-management
   ],
   imports: [
     BrowserModule,
