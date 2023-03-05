@@ -1,54 +1,8 @@
 <div class="row m-0">
-  <div class="col-12">
-    <p-card [style]="{ padding: '0' }" class="navbar-dashboard">
-      <ng-template pTemplate="body ">
-        <div class="flex align-items-center justify-content-between">
-          <img src="../../../assets/Images/Itmslogo.svg" alt="" id="logo" />
-          <div>
-            <!-- Navbar Buttons -->
-            <p-selectButton
-              [options]="stateOptions"
-              optionLabel="label"
-              optionValue="value"
-            ></p-selectButton>
-          </div>
-          <div class="flex align-items-center justify-content-between">
-            <img
-              src="../../../assets/Images/Notifications.svg"
-              alt=""
-              srcset=""
-              class="notification-img"
-            />
-            <div class="vr"></div>
-            <img
-              src="../../../assets/Images/Frame.svg"
-              alt=""
-              srcset=""
-              class="notification-img"
-            />
-            <label class="pl-1 mb-0 font-bold client-name"> {{ name }} </label>
-            <div class="dropdown pl-2">
-              <button
-                pButton
-                pRipple
-                type="button"
-                (click)="menu.toggle($event)"
-                icon="pi pi-angle-down"
-                class="p-button-rounded p-button-text"
-              ></button>
-              <p-menu #menu [popup]="true" [model]="items"></p-menu>
-            </div>
-          </div>
-        </div>
-      </ng-template>
-    </p-card>
-  </div>
 
-  <div class="flex-column justify-content-center media-breakpoint">
-    <!-- <h4 class="text-black-alpha-90">Welcome , {{ name }}</h4> -->
-    <div class="row gap-2 align-items-center justify-content-center">
-      <!--  -->
-      <h4 class="text-black-alpha-90">Welcome , {{ name }}</h4>
+  <app-top-header class="p-0"></app-top-header>
+
+ 
       <div class="col-md-3 cards">
         <div class="flex justify-content-between">
           <div class="block col-12">
@@ -145,7 +99,7 @@
       </div>
 
       <!-- SKILLS -->
-      <div class="col-md-5 skill-cards">
+      <div class="col-md-4 skill-cards">
         <div class="block">
           <div class="flex align-items-center justify-content-between">
             <p class="text-black-alpha-90 font-bold px-3 py-2" id="sklearned">

@@ -1,0 +1,46 @@
+<div class="col-12">
+  <p-card [style]="{ padding: '0' }" class="navbar-dashboard">
+    <ng-template pTemplate="body ">
+      <div class="flex align-items-center justify-content-between">
+        <img src="../../../assets/Images/Itmslogo.svg" alt="" id="logo" />
+        <div>
+          <!-- Navbar Buttons -->
+          <p-selectButton
+            [options]="stateOptions"
+            optionLabel="label"
+            optionValue="value"
+            styleClass="toogle-color"
+            (onOptionClick)="redirectToLoginPage($event.option.value)"
+          ></p-selectButton>
+        </div>
+        <div class="flex align-items-center justify-content-between">
+          <img
+            src="../../../assets/Images/Notifications.svg"
+            alt=""
+            srcset=""
+            class="notification-img"
+          />
+          <div class="vr"></div>
+          <img
+            src="../../../assets/Images/Frame.svg"
+            alt=""
+            srcset=""
+            class="notification-img"
+          />
+          <label class="pl-1 mb-0 font-bold client-name"> {{ name }} </label>
+          <div class="dropdown pl-2">
+            <button
+              pButton
+              pRipple
+              type="button"
+              (click)="menu.toggle($event)"
+              icon="pi pi-angle-down"
+              class="p-button-rounded p-button-text"
+            ></button>
+            <p-menu #menu [popup]="true" [model]="items"></p-menu>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-card>
+</div>

@@ -16,10 +16,14 @@ import { DividerModule } from 'primeng/divider';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { MenuModule } from 'primeng/menu';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { TableModule } from 'primeng/table';
+import { SidebarModule } from 'primeng/sidebar';
+import { TopHeaderComponent } from './top-header/top-header.component';
+import { LeaveManagementComponent } from './leave-management/leave-management.component';
+import { CalendarModule } from 'primeng/calendar';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import { NewPasswordComponent } from './new-password/new-password.component';
-
-
 
 @NgModule({
   imports: [
@@ -34,16 +38,19 @@ import { NewPasswordComponent } from './new-password/new-password.component';
     ProgressBarModule,
     ToastModule,
     MenuModule,
-    SelectButtonModule
+    SelectButtonModule,
+    TableModule,
+    SidebarModule,
+    CalendarModule
   ],
   declarations: [
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
     DashboardComponent,
+    TopHeaderComponent,
+    LeaveManagementComponent,
     NewPasswordComponent,
-    
-    
   ],
   exports: [FooterComponent, NavbarComponent, SidebarComponent],
 })

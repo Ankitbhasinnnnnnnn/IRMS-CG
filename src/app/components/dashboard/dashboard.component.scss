@@ -60,12 +60,16 @@ img {
 :host::ng-deep .p-button {
   background-color: #2d4a56 !important;
   color: white !important;
+
   border: 0 !important;
+
 }
 :host::ng-deep .p-highlight {
   background-color: #ffb81c !important;
   color: white !important;
+
   border: 0 !important;
+
 }
 
 #logo {
@@ -146,7 +150,7 @@ img {
   width: 24px;
   height: 24px;
   position: absolute;
-  right: -5px;
+  right: -12px;
 }
 #angular-skill {
   border: 1px solid rgb(225, 225, 225);
@@ -295,7 +299,17 @@ img {
   align-content: start;
   // justify-content: center;
 }
+
+@media screen and (min-width: 1400px) {
+  .media-breakpoint {
+    padding-left: 10rem;
+    padding-right: 0rem;
+  }
+}
+@media screen and (max-width: 1366px) {
+
 @media screen and (min-width: 768px) {
+
   .media-breakpoint {
     padding-left: 6rem;
     padding-right: 0rem;

@@ -22,8 +22,8 @@ import { KnobModule } from 'primeng/knob';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { RippleModule } from 'primeng/ripple';
-import {InputTextModule} from 'primeng/inputtext';
-import {FormsModule} from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 
 @NgModule({
@@ -36,7 +36,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     AuthLayoutComponent,
     VideoPanelComponent,
     ForgotPasswordComponent,
-    
+    leave-management
   ],
   imports: [
     BrowserModule,
@@ -54,7 +54,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     ButtonModule,
     RippleModule,
     InputTextModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
