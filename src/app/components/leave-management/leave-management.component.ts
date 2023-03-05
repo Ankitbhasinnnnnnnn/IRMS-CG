@@ -14,6 +14,7 @@ export interface Product {
   category?: string;
   image?: string;
   rating?: string;
+  date3: Date;
 }
 @Component({
   selector: 'app-leave-management',

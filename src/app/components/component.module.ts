@@ -21,6 +21,7 @@ import { TableModule } from 'primeng/table';
 import { SidebarModule } from 'primeng/sidebar';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { LeaveManagementComponent } from './leave-management/leave-management.component';
+import { CalendarModule } from 'primeng/calendar';
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { LeaveManagementComponent } from './leave-management/leave-management.co
     SelectButtonModule,
     TableModule,
     SidebarModule,
+    CalendarModule
   ],
   declarations: [
     FooterComponent,
