@@ -5,13 +5,22 @@
         <img src="../../../assets/Images/Itmslogo.svg" alt="" id="logo" />
         <div>
           <!-- Navbar Buttons -->
-          <p-selectButton
+          <!-- <p-selectButton
             [options]="stateOptions"
             optionLabel="label"
             optionValue="value"
             styleClass="toogle-color"
             (onOptionClick)="redirectToLoginPage($event.option.value)"
-          ></p-selectButton>
+          ></p-selectButton> -->
+          <div class="btn-split">
+            <div class="btn-1" (click)="redirectToLoginPage('btn-1')">
+              My Learning
+            </div>
+            <div class="divider"></div>
+            <div class="btn-2" (click)="redirectToLoginPage('btn-2')">
+              Leave Management
+            </div>
+          </div>
         </div>
         <div class="flex align-items-center justify-content-between">
           <img

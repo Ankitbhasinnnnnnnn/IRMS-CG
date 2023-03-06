@@ -45,7 +45,6 @@ img {
   color: white !important;
 
   border: 0 !important;
-
 }
 
 #logo {
@@ -102,6 +101,33 @@ img {
   top: 50px !important;
   left: -140px !important;
 }
+
+.btn-split {
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.4rem 1rem;
+  width: 20rem;
+  color: whitesmoke;
+  border-radius: 6px;
+  display: flex;
+  background-color: #2d4a56;
+}
+.divider {
+  width: 25px;
+  height: 0px;
+
+  opacity: 0.4;
+  border: 1px solid #ffffff;
+  transform: rotate(90deg);
+}
+
+.btn-2 {
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  background-color: #ffb81c;
+  border-radius: 0.25rem;
+}
+
 .media-breakpoint {
   //padding-left: 3rem;
   align-content: start;

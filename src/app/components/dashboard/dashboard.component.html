@@ -1,40 +1,37 @@
-<div class="row m-0">
-
-  <app-top-header class="p-0"></app-top-header>
-  
- 
-      <div class="col-md-3 cards">
-        <div class="flex justify-content-between">
-          <div class="block col-12">
-            <div class="flex align-items-center justify-content-around pt-1">
-              <div>
-                <div class="font-bold w-100">Learning Times</div>
-                <h5 class="text-black-alpha-90">This Week</h5>
-                <p class="text-black-alpha-90 font-bold" id="hours">20</p>
-                <h5 class="text-black-alpha-90">Hours</h5>
-              </div>
-              <div class="block pl-2">
-                <div
-                  class="flex align-items-center justify-content-center px-2"
-                  id="time"
-                >
-                  <img
-                    src="../../../assets/svg/Vectortime.svg"
-                    alt=""
-                    id="svgtime"
-                  />
-                  <p class="text-black-alpha-90" id="hrs">1.2 hours</p>
-                </div>
-                <p
-                  class="text-black-alpha-90 pl-2 align-items-center justify-content-between"
-                >
-                  vs last Week
-                </p>
-              </div>
-            </div>
+<app-top-header class="p-0"></app-top-header>
+<div class="row m-0 media-breakpoint">
+  <div class="col-md-3 cards">
+    <div class="flex justify-content-between">
+      <div class="block col-12">
+        <div class="flex align-items-center justify-content-around pt-1">
+          <div>
+            <div class="font-bold w-100">Learning Times</div>
+            <h5 class="text-black-alpha-90">This Week</h5>
+            <p class="text-black-alpha-90 font-bold" id="hours">20</p>
+            <h5 class="text-black-alpha-90">Hours</h5>
           </div>
+          <div class="block pl-2">
+            <div
+              class="flex align-items-center justify-content-center px-2"
+              id="time"
+            >
+              <img
+                src="../../../assets/svg/Vectortime.svg"
+                alt=""
+                id="svgtime"
+              />
+              <p class="text-black-alpha-90" id="hrs">1.2 hours</p>
+            </div>
+            <p
+              class="text-black-alpha-90 pl-2 align-items-center justify-content-between"
+            >
+              vs last Week
+            </p>
+          </div>
+        </div>
+      </div>
 
-          <!-- <div class="col-7 block align-items-center">
+      <!-- <div class="col-7 block align-items-center">
             <div
               class="course flex align-items-center justify-content-between p-2 mt-1"
             >
@@ -62,415 +59,396 @@
               <p class="font-bold pl-2 pt-2" id="text2">Collected</p>
             </div>
           </div> -->
+    </div>
+  </div>
+  <div class="d-block col-md-3">
+    <div class="course-cards">
+      <div class="course flex align-items-center justify-content-between p-2">
+        <div class="flex align-items-center justify-content-between">
+          <img
+            src="../../../assets/svg/Vectorcourse.svg"
+            alt=""
+            id="svgcourse"
+          />
+          <p class="text-black-alpha-90 font-bold pl-4">4 Course</p>
         </div>
-      </div>
-      <div class="d-block col-md-3">
-        <div class="course-cards">
-          <div
-            class="course flex align-items-center justify-content-between p-2"
-          >
-            <div class="flex align-items-center justify-content-between">
-              <img
-                src="../../../assets/svg/Vectorcourse.svg"
-                alt=""
-                id="svgcourse"
-              />
-              <p class="text-black-alpha-90 font-bold pl-4">4 Course</p>
-            </div>
-            <p class="font-bold pl-2" id="text1">Assigned</p>
-          </div>
-        </div>
-
-        <div class="course-cards">
-          <div
-            class="course2 flex align-items-center justify-content-between p-2"
-          >
-            <div class="flex align-items-center justify-content-between">
-              <img
-                src="../../../assets/svg/vectorbadge.svg"
-                alt=""
-                id="svgcourse"
-              />
-              <p class="text-black-alpha-90 font-bold pl-4">3 Badges</p>
-            </div>
-            <p class="font-bold pl-2" id="text2">Collected</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- SKILLS -->
-      <div class="col-md-4 skill-cards">
-        <div class="block">
-          <div class="flex align-items-center justify-content-between">
-            <p class="text-black-alpha-90 font-bold px-3 py-2" id="sklearned">
-              Skills Learned: 5
-            </p>
-            <button
-              pButton
-              pRipple
-              type="button"
-              label="See All"
-              class="p-button-text"
-            ></button>
-          </div>
-          <div class="flex p-2 gap-3">
-            <div class="skills" id="angular-skill">
-              <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
-              <img
-                src="../../../assets/svg/Vectorcheck.svg"
-                alt=""
-                id="check"
-                class="inner"
-              />
-              <img
-                src="../../../assets/svg/vectorbadge.svg"
-                alt=""
-                id="badge"
-              />
-            </div>
-
-            <div class="skills">
-              <img src="../../../assets/skills/skills-1.svg" alt="" />
-            </div>
-            <div class="skills">
-              <img src="../../../assets/skills/skills-2.svg" alt="" />
-            </div>
-            <div class="skills">
-              <img src="../../../assets/skills/skills-3.svg" alt="" />
-            </div>
-            <div class="skills">
-              <img src="../../../assets/skills/skills-4.svg" alt="" />
-            </div>
-          </div>
-        </div>
+        <p class="font-bold pl-2" id="text1">Assigned</p>
       </div>
     </div>
-  
-  <!-- <h4 class="text-black-alpha-90 py-3">Learning Modules Assigned</h4> -->
 
-  <div class="">
-    <div class="row gap-4 media-breakpoint">
-      <!-- Card 1 -->
-      <h4 class="text-black-alpha-90 pt-4 p-0">Learning Modules Assigned</h4>
-      <div class="col-sm-5 cards">
-        <div class="flex align-items-center justify-content-around">
-          <div class="block col-8">
-            <div class="flex">
-              <div class="head-logo">
-                <img src="../../../assets/svg/angular.svg" alt="" />
-              </div>
-              <div class="block px-2">
-                <p class="text-black-alpha-90 font-medium" id="beginner">
-                  Beginner
-                </p>
-                <p class="text-black-alpha-90 font-semibold">
-                  Angular- The Complete Guide
-                </p>
-                <p class="text-black-alpha-90 assignedBy">
-                  Assigned By <Span class="font-medium">John Doe</Span>
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <p class="text-black-alpha-90 font-normal description">
-                Master angular(Former Angular 2) and build awesome, reactive web
-                apps with the successor of Angular JS with the successor of
-                Angular JS.
-              </p>
-            </div>
-            <div class="block">
-              <button
-                pButton
-                type="button"
-                label="Go to course"
-                class="w-100 btnn"
-                routerLink="/video-panel"
-              ></button>
-            </div>
-          </div>
-          <div
-            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
-          >
-            <p class="text-center status-text">Start Learning</p>
-            <div class="badge1">
-              <img
-                src="../../../assets/svg/Groupbadge1.svg"
-                alt=""
-                class="svglogo"
-              />
-            </div>
-            <p class="text-center statusmsg">
-              Lets complete the stages and earn your badge.
-            </p>
-            <p
-              class="text-white-600 bg-green-600 text-center border-round-md rem-status"
-            >
-              14 Days to Complete
-            </p>
-            <p class="text-black-alpha-90 text-center assignedOn">
-              Assigned On: <span class="font-semibold">02-02-2023</span>
-            </p>
-          </div>
+    <div class="course-cards">
+      <div class="course2 flex align-items-center justify-content-between p-2">
+        <div class="flex align-items-center justify-content-between">
+          <img
+            src="../../../assets/svg/vectorbadge.svg"
+            alt=""
+            id="svgcourse"
+          />
+          <p class="text-black-alpha-90 font-bold pl-4">3 Badges</p>
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col-sm-5 cards">
-        <div class="flex align-items-center justify-content-around">
-          <div class="block col-8">
-            <div class="flex">
-              <div class="head-logo">
-                <img src="../../../assets/svg/angular.svg" alt="" />
-              </div>
-              <div class="block px-2">
-                <p class="text-black-alpha-90 font-medium" id="beginner">
-                  Beginner
-                </p>
-                <p class="text-black-alpha-90 font-semibold">
-                  Angular- The Complete Guide
-                </p>
-                <p class="text-black-alpha-90 assignedBy">
-                  Assigned By <Span class="font-medium">John Doe</Span>
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <p class="text-black-alpha-90 font-normal description">
-                Master angular(Former Angular 2) and build awesome, reactive web
-                apps with the successor of Angular JS with the successor of
-                Angular JS.
-              </p>
-            </div>
-            <div class="block">
-              <button
-                pButton
-                type="button"
-                label="Go to course"
-                class="w-100 btnn"
-                routerLink="/video-panel"
-              ></button>
-            </div>
-          </div>
-          <div
-            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
-          >
-            <p class="text-center status-text">Making Progress!</p>
-            <div class="badge1">
-              <img
-                src="../../../assets/svg/progress.svg"
-                alt=""
-                class="svglogo"
-              />
-            </div>
-            <p class="text-center statusmsg">
-              You have completed the first stage!
-            </p>
-            <div>
-              <p class="text-black-alpha-90 text-right" id="percent">33%</p>
-              <p-progressBar [value]="33" id="progress"></p-progressBar>
-              <p
-                class="text-black-alpha-90 text-center font-semibold remaining"
-              >
-                8 days remaining
-              </p>
-            </div>
-            <p class="text-black-alpha-90 text-center pt-2 assignedOn">
-              Assigned On: <span class="font-semibold">02-02-2023</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-sm-5 cards">
-        <div class="flex align-items-center justify-content-around">
-          <div class="block col-8">
-            <div class="flex">
-              <div class="head-logo">
-                <img src="../../../assets/svg/angular.svg" alt="" />
-              </div>
-              <div class="block px-2">
-                <p class="text-black-alpha-90 font-medium" id="beginner">
-                  Beginner
-                </p>
-                <p class="text-black-alpha-90 font-semibold">
-                  Angular- The Complete Guide
-                </p>
-                <p class="text-black-alpha-90 assignedBy">
-                  Assigned By <Span class="font-medium">John Doe</Span>
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <p class="text-black-alpha-90 font-normal description">
-                Master angular(Former Angular 2) and build awesome, reactive web
-                apps with the successor of Angular JS with the successor of
-                Angular JS.
-              </p>
-            </div>
-            <div class="block">
-              <button
-                pButton
-                type="button"
-                label="Go to course"
-                class="w-100 btnn"
-                routerLink="/video-panel"
-              ></button>
-            </div>
-          </div>
-          <div
-            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
-          >
-            <p class="text-center status-text">Running fast!</p>
-            <div class="badge1">
-              <img
-                src="../../../assets/svg/Rabbit.svg"
-                alt=""
-                class="svglogo"
-              />
-            </div>
-            <p class="text-center statusmsg py-2">
-              You have completed the second stage!
-            </p>
-            <div>
-              <p class="text-black-alpha-90 text-right" id="percent">50%</p>
-              <p-progressBar [value]="50" id="progress"></p-progressBar>
-              <p
-                class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
-              >
-                8 days remaining
-              </p>
-            </div>
-            <p class="text-black-alpha-90 text-center assignedOn">
-              Assigned On: <span class="font-semibold">02-02-2023</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-sm-5 cards">
-        <div class="flex align-items-center justify-content-around">
-          <div class="block col-8">
-            <div class="flex">
-              <div class="head-logo">
-                <img src="../../../assets/svg/angular.svg" alt="" />
-              </div>
-              <div class="block px-2">
-                <p class="text-black-alpha-90 font-medium" id="beginner">
-                  Beginner
-                </p>
-                <p class="text-black-alpha-90 font-semibold">
-                  Angular- The Complete Guide
-                </p>
-                <p class="text-black-alpha-90 assignedBy">
-                  Assigned By <Span class="font-medium">John Doe</Span>
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <p class="text-black-alpha-90 font-normal description">
-                Master angular(Former Angular 2) and build awesome, reactive web
-                apps with the successor of Angular JS with the successor of
-                Angular JS.
-              </p>
-            </div>
-            <div class="block">
-              <button
-                pButton
-                type="button"
-                label="Go to course"
-                class="w-100 btnn"
-                routerLink="/video-panel"
-              ></button>
-            </div>
-          </div>
-          <div
-            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
-          >
-            <p class="text-center status-text">Let’s Celebrate!</p>
-            <div class="badge1">
-              <img src="../../../assets/svg/Badge.svg" alt="" id="svgbadge" />
-            </div>
-            <p class="text-center statusmsg py-1">You have earned the badge</p>
-            <div>
-              <p class="text-black-alpha-90 text-right" id="percent">99%</p>
-              <p-progressBar [value]="99" id="progress"></p-progressBar>
-              <p
-                class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
-              >
-                2 days remaining
-              </p>
-            </div>
-            <p class="text-black-alpha-90 text-center assignedOn">
-              Assigned On: <span class="font-semibold">02-02-2023</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-sm-5 cards">
-        <div class="flex align-items-center justify-content-around">
-          <div class="block col-8">
-            <div class="flex">
-              <div class="head-logo">
-                <img src="../../../assets/svg/angular.svg" alt="" />
-              </div>
-              <div class="block px-2">
-                <p class="text-black-alpha-90 font-medium" id="beginner">
-                  Beginner
-                </p>
-                <p class="text-black-alpha-90 font-semibold">
-                  Angular- The Complete Guide
-                </p>
-                <p class="text-black-alpha-90 assignedBy">
-                  Assigned By <Span class="font-medium">John Doe</Span>
-                </p>
-              </div>
-            </div>
-            <div class="block">
-              <p class="text-black-alpha-90 font-normal description">
-                Master angular(Former Angular 2) and build awesome, reactive web
-                apps with the successor of Angular JS with the successor of
-                Angular JS.
-              </p>
-            </div>
-            <div class="block">
-              <button
-                pButton
-                type="button"
-                label="Go to course"
-                class="w-100 btnn"
-                routerLink="/video-panel"
-              ></button>
-            </div>
-          </div>
-          <div
-            class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
-          >
-            <p class="text-center status-text">Running late!</p>
-            <div class="badge1">
-              <img
-                src="../../../assets/svg/alaram.svg"
-                alt=""
-                class="svglogo"
-              />
-            </div>
-            <p class="text-center statusmsg">
-              Lets complete the stages and earn your badge.
-            </p>
-            <p
-              class="text-white-600 bg-red-600 text-center border-round-md rem-status"
-            >
-              Overdue 5 days
-            </p>
-            <p class="text-black-alpha-90 text-center assignedOn">
-              Assigned On: <span class="font-semibold">02-02-2023</span>
-            </p>
-          </div>
-        </div>
+        <p class="font-bold pl-2" id="text2">Collected</p>
       </div>
     </div>
   </div>
 
+  <!-- SKILLS -->
+  <div class="col-md-4 skill-cards">
+    <div class="block">
+      <div class="flex align-items-center justify-content-between">
+        <p class="text-black-alpha-90 font-bold px-3 py-2" id="sklearned">
+          Skills Learned: 5
+        </p>
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="See All"
+          class="p-button-text"
+        ></button>
+      </div>
+      <div class="flex p-2 gap-3">
+        <div class="skills" id="angular-skill">
+          <img src="../../../assets/svg/angular.svg" alt="" class="outer" />
+          <img
+            src="../../../assets/svg/Vectorcheck.svg"
+            alt=""
+            id="check"
+            class="inner"
+          />
+          <img src="../../../assets/svg/vectorbadge.svg" alt="" id="badge" />
+        </div>
+
+        <div class="skills">
+          <img src="../../../assets/skills/skills-1.svg" alt="" />
+        </div>
+        <div class="skills">
+          <img src="../../../assets/skills/skills-2.svg" alt="" />
+        </div>
+        <div class="skills">
+          <img src="../../../assets/skills/skills-3.svg" alt="" />
+        </div>
+        <div class="skills">
+          <img src="../../../assets/skills/skills-4.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <h4 class="text-black-alpha-90 py-3">Learning Modules Assigned</h4> -->
+
+<div class="">
+  <div class="row gap-4 media-breakpoint">
+    <!-- Card 1 -->
+    <h4 class="text-black-alpha-90 pt-4 p-0">Learning Modules Assigned</h4>
+    <div class="col-sm-5 cards">
+      <div class="flex align-items-center justify-content-around">
+        <div class="block col-8">
+          <div class="flex">
+            <div class="head-logo">
+              <img src="../../../assets/svg/angular.svg" alt="" />
+            </div>
+            <div class="block px-2">
+              <p class="text-black-alpha-90 font-medium" id="beginner">
+                Beginner
+              </p>
+              <p class="text-black-alpha-90 font-semibold">
+                Angular- The Complete Guide
+              </p>
+              <p class="text-black-alpha-90 assignedBy">
+                Assigned By <Span class="font-medium">John Doe</Span>
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <p class="text-black-alpha-90 font-normal description">
+              Master angular(Former Angular 2) and build awesome, reactive web
+              apps with the successor of Angular JS with the successor of
+              Angular JS.
+            </p>
+          </div>
+          <div class="block">
+            <button
+              pButton
+              type="button"
+              label="Go to course"
+              class="w-100 btnn"
+              routerLink="/video-panel"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+        >
+          <p class="text-center status-text">Start Learning</p>
+          <div class="badge1">
+            <img
+              src="../../../assets/svg/Groupbadge1.svg"
+              alt=""
+              class="svglogo"
+            />
+          </div>
+          <p class="text-center statusmsg">
+            Lets complete the stages and earn your badge.
+          </p>
+          <p
+            class="text-white-600 bg-green-600 text-center border-round-md rem-status"
+          >
+            14 Days to Complete
+          </p>
+          <p class="text-black-alpha-90 text-center assignedOn">
+            Assigned On: <span class="font-semibold">02-02-2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-sm-5 cards">
+      <div class="flex align-items-center justify-content-around">
+        <div class="block col-8">
+          <div class="flex">
+            <div class="head-logo">
+              <img src="../../../assets/svg/angular.svg" alt="" />
+            </div>
+            <div class="block px-2">
+              <p class="text-black-alpha-90 font-medium" id="beginner">
+                Beginner
+              </p>
+              <p class="text-black-alpha-90 font-semibold">
+                Angular- The Complete Guide
+              </p>
+              <p class="text-black-alpha-90 assignedBy">
+                Assigned By <Span class="font-medium">John Doe</Span>
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <p class="text-black-alpha-90 font-normal description">
+              Master angular(Former Angular 2) and build awesome, reactive web
+              apps with the successor of Angular JS with the successor of
+              Angular JS.
+            </p>
+          </div>
+          <div class="block">
+            <button
+              pButton
+              type="button"
+              label="Go to course"
+              class="w-100 btnn"
+              routerLink="/video-panel"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+        >
+          <p class="text-center status-text">Making Progress!</p>
+          <div class="badge1">
+            <img
+              src="../../../assets/svg/progress.svg"
+              alt=""
+              class="svglogo"
+            />
+          </div>
+          <p class="text-center statusmsg">
+            You have completed the first stage!
+          </p>
+          <div>
+            <p class="text-black-alpha-90 text-right" id="percent">33%</p>
+            <p-progressBar [value]="33" id="progress"></p-progressBar>
+            <p class="text-black-alpha-90 text-center font-semibold remaining">
+              8 days remaining
+            </p>
+          </div>
+          <p class="text-black-alpha-90 text-center pt-2 assignedOn">
+            Assigned On: <span class="font-semibold">02-02-2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-sm-5 cards">
+      <div class="flex align-items-center justify-content-around">
+        <div class="block col-8">
+          <div class="flex">
+            <div class="head-logo">
+              <img src="../../../assets/svg/angular.svg" alt="" />
+            </div>
+            <div class="block px-2">
+              <p class="text-black-alpha-90 font-medium" id="beginner">
+                Beginner
+              </p>
+              <p class="text-black-alpha-90 font-semibold">
+                Angular- The Complete Guide
+              </p>
+              <p class="text-black-alpha-90 assignedBy">
+                Assigned By <Span class="font-medium">John Doe</Span>
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <p class="text-black-alpha-90 font-normal description">
+              Master angular(Former Angular 2) and build awesome, reactive web
+              apps with the successor of Angular JS with the successor of
+              Angular JS.
+            </p>
+          </div>
+          <div class="block">
+            <button
+              pButton
+              type="button"
+              label="Go to course"
+              class="w-100 btnn"
+              routerLink="/video-panel"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+        >
+          <p class="text-center status-text">Running fast!</p>
+          <div class="badge1">
+            <img src="../../../assets/svg/Rabbit.svg" alt="" class="svglogo" />
+          </div>
+          <p class="text-center statusmsg py-2">
+            You have completed the second stage!
+          </p>
+          <div>
+            <p class="text-black-alpha-90 text-right" id="percent">50%</p>
+            <p-progressBar [value]="50" id="progress"></p-progressBar>
+            <p
+              class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
+            >
+              8 days remaining
+            </p>
+          </div>
+          <p class="text-black-alpha-90 text-center assignedOn">
+            Assigned On: <span class="font-semibold">02-02-2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-sm-5 cards">
+      <div class="flex align-items-center justify-content-around">
+        <div class="block col-8">
+          <div class="flex">
+            <div class="head-logo">
+              <img src="../../../assets/svg/angular.svg" alt="" />
+            </div>
+            <div class="block px-2">
+              <p class="text-black-alpha-90 font-medium" id="beginner">
+                Beginner
+              </p>
+              <p class="text-black-alpha-90 font-semibold">
+                Angular- The Complete Guide
+              </p>
+              <p class="text-black-alpha-90 assignedBy">
+                Assigned By <Span class="font-medium">John Doe</Span>
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <p class="text-black-alpha-90 font-normal description">
+              Master angular(Former Angular 2) and build awesome, reactive web
+              apps with the successor of Angular JS with the successor of
+              Angular JS.
+            </p>
+          </div>
+          <div class="block">
+            <button
+              pButton
+              type="button"
+              label="Go to course"
+              class="w-100 btnn"
+              routerLink="/video-panel"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+        >
+          <p class="text-center status-text">Let’s Celebrate!</p>
+          <div class="badge1">
+            <img src="../../../assets/svg/Badge.svg" alt="" id="svgbadge" />
+          </div>
+          <p class="text-center statusmsg py-1">You have earned the badge</p>
+          <div>
+            <p class="text-black-alpha-90 text-right" id="percent">99%</p>
+            <p-progressBar [value]="99" id="progress"></p-progressBar>
+            <p
+              class="text-black-alpha-90 text-center pt-1 font-semibold remaining"
+            >
+              2 days remaining
+            </p>
+          </div>
+          <p class="text-black-alpha-90 text-center assignedOn">
+            Assigned On: <span class="font-semibold">02-02-2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-sm-5 cards">
+      <div class="flex align-items-center justify-content-around">
+        <div class="block col-8">
+          <div class="flex">
+            <div class="head-logo">
+              <img src="../../../assets/svg/angular.svg" alt="" />
+            </div>
+            <div class="block px-2">
+              <p class="text-black-alpha-90 font-medium" id="beginner">
+                Beginner
+              </p>
+              <p class="text-black-alpha-90 font-semibold">
+                Angular- The Complete Guide
+              </p>
+              <p class="text-black-alpha-90 assignedBy">
+                Assigned By <Span class="font-medium">John Doe</Span>
+              </p>
+            </div>
+          </div>
+          <div class="block">
+            <p class="text-black-alpha-90 font-normal description">
+              Master angular(Former Angular 2) and build awesome, reactive web
+              apps with the successor of Angular JS with the successor of
+              Angular JS.
+            </p>
+          </div>
+          <div class="block">
+            <button
+              pButton
+              type="button"
+              label="Go to course"
+              class="w-100 btnn"
+              routerLink="/video-panel"
+            ></button>
+          </div>
+        </div>
+        <div
+          class="block col-4 align-items-center justify-content-center px-2 border-round-md right"
+        >
+          <p class="text-center status-text">Running late!</p>
+          <div class="badge1">
+            <img src="../../../assets/svg/alaram.svg" alt="" class="svglogo" />
+          </div>
+          <p class="text-center statusmsg">
+            Lets complete the stages and earn your badge.
+          </p>
+          <p
+            class="text-white-600 bg-red-600 text-center border-round-md rem-status"
+          >
+            Overdue 5 days
+          </p>
+          <p class="text-black-alpha-90 text-center assignedOn">
+            Assigned On: <span class="font-semibold">02-02-2023</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
