@@ -10,7 +10,7 @@ import { MenuItem, PrimeNGConfig } from 'primeng/api';
 export class TopHeaderComponent {
   items: MenuItem[] = [];
   name: string = '';
-  value1: any = 'off';
+  value1: any = 'My Learning';
   stateOptions: any[];
 
   constructor(

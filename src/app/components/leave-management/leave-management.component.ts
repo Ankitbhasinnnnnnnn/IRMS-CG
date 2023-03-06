@@ -8,7 +8,7 @@ export interface Product {
   code?: string;
   SingleDate?: string;
   Reason?: string;
-  MultipleDays?: string;
+  Ending?: string;
   quantity?: number;
   inventoryStatus?: string;
   Month?: string;
@@ -86,7 +86,7 @@ var diffDays = Math.ceil(diff / (1000 * 3600 * 24));
 if(multipleday == undefined)
   {
   diffDays = 1;
-  Multipleday = '';
+  Multipleday = Singleday;
 
    }
     const details = {
@@ -96,12 +96,13 @@ if(multipleday == undefined)
       Ending:Multipleday,
       days: diffDays,
 
-          }
+      }
    
     
-    console.log(this.Leave);
+  
     this.products1.push(details)
-    
+    this.Leave.push(details)
+    console.log(this.Leave);
   }
 
   // customSort(event: SortEvent) {

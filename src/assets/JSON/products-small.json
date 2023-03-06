@@ -11,31 +11,8 @@
       "quantity": 1,
       "inventoryStatus": "INSTOCK",
       "rating": "Cancel"
-    },
-    {
-      "id": "1001",
-      "code": "nvklal433",
-      "name": "Black Watch",
-      "Reason": "Product Reason",
-      "image": "black-watch.jpg",
-      "price": 72,
-      "category": "Accessories",
-      "quantity": 61,
-      "inventoryStatus": "INSTOCK",
-      "rating": "Cancel"
-    },
-    {
-      "id": "1002",
-      "code": "zz21cz3c1",
-      "name": "Blue Band",
-      "Reason": "Product Reason",
-      "image": "blue-band.jpg",
-      "price": 79,
-      "category": "Fitness",
-      "quantity": 2,
-      "inventoryStatus": "LOWSTOCK",
-      "rating": "Cancel"
     }
+    
     
   ]
 }
