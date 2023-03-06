@@ -40,6 +40,13 @@ img {
   background-color: #ffb81c !important;
   color: white !important;
 }
+:host::ng-deep .p-highlight {
+  background-color: #ffb81c !important;
+  color: white !important;
+
+  border: 0 !important;
+
+}
 
 #logo {
   width: 10.313rem;

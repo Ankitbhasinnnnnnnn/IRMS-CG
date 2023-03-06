@@ -22,7 +22,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { LeaveManagementComponent } from './leave-management/leave-management.component';
 import { CalendarModule } from 'primeng/calendar';
-import {SelectButtonModule} from 'primeng/selectbutton';
+
 import { NewPasswordComponent } from './new-password/new-password.component';
 
 @NgModule({

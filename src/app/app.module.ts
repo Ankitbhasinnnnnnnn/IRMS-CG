@@ -25,7 +25,7 @@ import { RippleModule } from 'primeng/ripple';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-
+import {CalendarModule} from 'primeng/calendar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +36,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
     AuthLayoutComponent,
     VideoPanelComponent,
     ForgotPasswordComponent,
-    leave-management
+
   ],
   imports: [
     BrowserModule,
