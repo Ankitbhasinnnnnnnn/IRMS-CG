@@ -1,6 +1,9 @@
 * {
   font-family: "Lato", sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 
 ::-webkit-scrollbar {
   width: 10px;

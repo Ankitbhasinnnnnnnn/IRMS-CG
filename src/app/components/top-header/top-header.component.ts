@@ -25,7 +25,7 @@ export class TopHeaderComponent {
   redirectToLoginPage(val: any) {
     console.log(val);
 
-    if (val === 'Leave Management') {
+    if (val === 'btn-2') {
       this.approuting.navigate(['apply-leave']);
     } else {
       this.approuting.navigate(['dashboard']);
