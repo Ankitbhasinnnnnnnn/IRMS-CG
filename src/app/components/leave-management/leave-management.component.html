@@ -106,10 +106,32 @@
     <!-- <ng-template pTemplate="header">Holiday List</ng-template> -->
      
     <ng-template pTemplate="content">
-      <div class="d-flex">
-        <img src="../../../assets/svg/Holiday_icon.svg" alt="" />
-        <h6>Holiday List</h6>
+      <div class="d-flex align-items-center justify-content-start">
+        <img src="../../../assets/svg/list_holiday.svg" alt="" />
+        <h4 class="text-black m-0 pl-2">Holiday List</h4>
       </div>
+      <div class="d-flex align-items-center justify-content-center py-4">
+        <div class="btn-group">
+          <button type="button" class="btn1">India Holiday</button>
+          <button type="button" class="btn2">U.S Holidays</button>
+        </div>
+      </div>
+      <p-table >
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>Jan 02, 2023 Monday</td>
+            <td>New Year’s Day (Observed)</td>
+          </tr>
+          <tr>
+            <td>Jan 02, 2023 Monday</td>
+            <td>New Year’s Day (Observed)</td>
+          </tr>
+          <tr>
+            <td>Jan 02, 2023 Monday</td>
+            <td>New Year’s Day (Observed)</td>
+          </tr>
+        </ng-template>
+      </p-table>
     </ng-template>
      
     <ng-template pTemplate="footer">Footer Content</ng-template>
