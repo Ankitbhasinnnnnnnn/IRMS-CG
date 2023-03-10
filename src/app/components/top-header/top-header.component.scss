@@ -124,8 +124,16 @@ img {
 .btn-2 {
   cursor: pointer;
   padding: 0.2rem 0.6rem;
-  background-color: #ffb81c;
+
   border-radius: 0.25rem;
+}
+
+.active {
+  background-color: #ffb81c;
+}
+
+.inActive {
+  background-color: #2d4a56;
 }
 
 .media-breakpoint {

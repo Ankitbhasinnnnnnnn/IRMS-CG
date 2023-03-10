@@ -12,6 +12,7 @@ export class TopHeaderComponent {
   name: string = '';
   value1: any = 'My Learning';
   stateOptions: any[];
+  toggle = true;
 
   constructor(
     private primengConfig: PrimeNGConfig,
@@ -27,7 +28,10 @@ export class TopHeaderComponent {
 
     if (val === 'btn-2') {
       this.approuting.navigate(['apply-leave']);
-    } else {
+      // this.bgColor = '#ffb81c';
+    }
+    if (val === 'btn-1') {
+      // this.bgColor = '#ffb81c';
       this.approuting.navigate(['dashboard']);
     }
   }
