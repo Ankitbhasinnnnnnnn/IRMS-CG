@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem, PrimeNGConfig } from 'primeng/api';
 
@@ -7,9 +7,12 @@ import { MenuItem, PrimeNGConfig } from 'primeng/api';
   templateUrl: './top-header.component.html',
   styleUrls: ['./top-header.component.scss'],
 })
-export class TopHeaderComponent {
+export class TopHeaderComponent  implements OnInit{
+  gfg:any = '';
+name: string = '';
+email: string = '';
   items: MenuItem[] = [];
-  name: string = '';
+  
   value1: any = 'My Learning';
   stateOptions: any[];
 
@@ -21,6 +24,28 @@ export class TopHeaderComponent {
       { label: 'My Learning', value: 'My Learning' },
       { label: 'Leave Management', value: 'Leave Management' },
     ];
+  }
+  ngOnInit(): void {
+    
+
+  this.primengConfig.ripple = true;
+
+        this.items = [{
+            label: this.name,
+            },
+            {
+                label: this.email,
+                items: [{
+                    label: 'Account settings',
+                    
+                    url: 'http://angular.io'
+                },
+                {
+                    label: 'Logout',
+                   
+                }
+            ]}
+        ];
   }
   redirectToLoginPage(val: any) {
     console.log(val);

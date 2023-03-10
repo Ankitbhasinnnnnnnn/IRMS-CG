@@ -22,7 +22,7 @@ import { SidebarModule } from 'primeng/sidebar';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { LeaveManagementComponent } from './leave-management/leave-management.component';
 import { CalendarModule } from 'primeng/calendar';
-
+import { TooltipModule } from 'primeng/tooltip';
 import { NewPasswordComponent } from './new-password/new-password.component';
 
 @NgModule({
@@ -41,7 +41,8 @@ import { NewPasswordComponent } from './new-password/new-password.component';
     SelectButtonModule,
     TableModule,
     SidebarModule,
-    CalendarModule
+    CalendarModule,
+    TooltipModule
   ],
   declarations: [
     FooterComponent,

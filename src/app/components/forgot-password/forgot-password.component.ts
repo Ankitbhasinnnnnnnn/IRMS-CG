@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./forgot-password.component.scss']
 })
 export class ForgotPasswordComponent {
+public VerfiyScreen :boolean = false;
+public email :string = "";
 
+
+EmailSubmit = (Email:any) => {
+  this.email = Email;
+  this.VerfiyScreen = true;
+}
 }

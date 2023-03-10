@@ -2,50 +2,40 @@ import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { SortEvent } from 'primeng/api';
 import { HttpClient } from '@angular/common/http';
+import {MessageService} from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 
-export interface Product {
-  id?: string;
-  code?: string;
-  SingleDate?: string;
-  Reason?: string;
-  Ending?: string;
-  quantity?: number;
-  inventoryStatus?: string;
-  Month?: string;
-  image?: string;
-  days?: number;
-  date3?: Date;
-  
-}
 @Component({
   selector: 'app-leave-management',
   templateUrl: './leave-management.component.html',
   styleUrls: ['./leave-management.component.scss'],
+  providers: [MessageService]
 })
 export class LeaveManagementComponent {
   visibleSidebar: boolean = false;
-  products1: Product[] = [];
   Leave: any = [];
   IsDisabled:boolean = true;
   value5 :Date = new Date();
   str:string = '';
   datePipeString : string| null = '';
-  constructor(private http: HttpClient ) {
+  constructor(private http: HttpClient, private messageService: MessageService , private primengConfig : PrimeNGConfig) {
    
   }
 
-  getProductsSmall() {
-    return this.http
-      .get<any>('assets/JSON/products-small.json')
-      .toPromise()
-      .then((res) => <Product[]>res.data)
-      .then((data) => {
-        return data;
-      });
-  }
+
+  // getProductsSmall() {
+  //   return this.http
+  //     .get<any>('assets/JSON/products-small.json')
+  //     .toPromise()
+  //     .then((res) => <Product[]>res.data)
+  //     .then((data) => {
+  //       return data;
+  //     });
+  // }
 
   ngOnInit() {
-    this.getProductsSmall().then((data) => (this.products1 = data));
+    this.primengConfig.ripple = true;
+
   }
   onChange = (e:any) => {
     console.log(e.target.value);
@@ -60,15 +50,15 @@ export class LeaveManagementComponent {
       this.IsDisabled = true;
     }
   }
-  raiseleave(reason:any, date:Date,multipleday: Date) 
+  raiseleave(reason:any, date:Date, multipleday: Date , form:any,modal: any) 
    {
-    
+    debugger;
   let day = date.getDate();
   let month = date.getMonth();
   let year = date.getFullYear();
   //month of leave
   var actualmonth = date.toLocaleString('default', { month: 'long' });
-
+  
   let Singleday= `${month}-${day}-${year}`;
   //single-day
   let multipledays = multipleday?.getDate();
@@ -83,26 +73,55 @@ var diff = Math.abs(date.getTime() - multipleday?.getTime());
 var diffDays = Math.ceil(diff / (1000 * 3600 * 24)); 
 //no of days
 
+//short the reason
+var smallreason =  reason.substring(0, 20) + '...';
 if(multipleday == undefined)
   {
-  diffDays = 1;
-  Multipleday = Singleday;
+    diffDays = 1;
+    Multipleday = Singleday;
 
-   }
-    const details = {
-      Month:  actualmonth,
+  }
+  //details for leave-management
+    const details = {  
+      Month:actualmonth,
+      SmallReason: smallreason,
       Reason: reason,
       SingleDate: Singleday,
-      Ending:Multipleday,
+      Ending: Multipleday,
       days: diffDays,
+      req_sent: 'Neeraj Shridhar',
+      Approved: "",
+      Status: "Pending",
+      Action: "Cancel",
+
+      
 
       }
+      
    
     
   
-    this.products1.push(details)
     this.Leave.push(details)
-    console.log(this.Leave);
+    
+    //to reset the form after raising the request for leave
+    form.reset();
+    console.log(modal);
+    modal.CancelModal();
+
+this.OpenPopup();
+  }
+  OpenPopup() {
+    debugger; 
+    this.messageService.add({severity:'success',  detail: 'Your Leave Request  Submitted your successfully'});
+   }
+  //cancel the leave request from the grid
+  RequestCancel() {
+    console.log("Request ");
+  }
+  //to reset the modal from cancel and Cross button
+  CancelModal(form:any) {
+    form.reset();
+    this.IsDisabled = true;
   }
 
   // customSort(event: SortEvent) {

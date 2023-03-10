@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-password.component.scss']
 })
 export class NewPasswordComponent {
+public confirmpassword: boolean = false;
 
+ChangePassword = () => { 
+  this.confirmpassword = true;
+}
 }

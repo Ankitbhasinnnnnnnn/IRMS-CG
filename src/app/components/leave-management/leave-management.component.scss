@@ -185,3 +185,10 @@ textarea::placeholder {
 .modal-content {
   width: 120% !important;
 }
+.leave-btn {
+	cursor: pointer  !important;
+}
+:host::ng-deep .p-toast-message-content {
+	display: flex !important;
+	justify-content: center!important;
+} 

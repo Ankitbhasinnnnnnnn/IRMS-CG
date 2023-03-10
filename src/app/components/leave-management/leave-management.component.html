@@ -1,12 +1,23 @@
+<p-toast position="top-center" key="bc"></p-toast>
+<p-toast position="top-center"></p-toast>
+
 <app-top-header class="p-0"></app-top-header>
 <div class="w-100 d-flex align-items-center justify-content-center mt-4">
   <div class="btn-request-leave">
-    <h4 class="text-black" id="title">My Leave Request</h4>
+    <h4 class="text-black" (click)="OpenPopup()" id="title">
+      My Leave Request
+    </h4>
     <div
       class="d-flex align-items-center justify-content-center btn-request-time-off"
     >
       <img src="../../../assets/svg/Request_Time_off.svg" alt="" />
-      <p data-bs-toggle="modal" data-bs-target="#exampleModal">Request Time Off</p>
+      <p
+        class="leave-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Request Time Off
+      </p>
     </div>
   </div>
 </div>
@@ -14,7 +25,7 @@
 <div class="d-flex align-items-center justify-content-center mt-2">
   <!-- <h2>Leave Management</h2> -->
   <div class="card">
-    <p-table [value]="products1" selectionMode="single">
+    <p-table [value]="Leave" selectionMode="single">
       <ng-template pTemplate="header">
         <tr>
           <th pSortableColumn="Month">
@@ -47,21 +58,42 @@
         </tr>
       </ng-template>
 
-      <ng-template pTemplate="body" let-product>
+      <ng-template pTemplate="body" let-Leave>
         <tr>
-          <td>{{ product.Month }}</td>
-          <td>{{ product.SingleDate }}</td>
-          <td>{{ product.Ending }}</td>
-          <td>{{ product.days }}</td>
-          <td>{{ product.Reason }}</td>
-          <td>{{ product.code }}</td>
-          <td>{{ product.name }}</td>
+          <td>{{ Leave.Month }}</td>
+          <td>{{ Leave.SingleDate }}</td>
+          <td>{{ Leave.Ending }}</td>
+          <td>{{ Leave.days }}</td>
+          <td>
+            {{ Leave.SmallReason }}
+            <img
+              pTooltip="{{ Leave.Reason }}"
+              tooltipPosition="bottom"
+              placeholder="Bottom"
+              src="../../../assets/Images/Reason.svg"
+            />
+          </td>
+
+          <td>{{ Leave.Approved }}</td>
+          <td>{{ Leave.req_sent }}</td>
+          <!-- <td>{{ Leave.req_sent }}</td> -->
           <td class="align-items-center justify-content-center">
             <div class="status">
-              {{ product.category }}
+              {{ Leave.Status }}
             </div>
           </td>
-          <td class="text-danger">{{ product.rating }}</td>
+          <td class="align-items-center justify-content-center">
+            <div>
+              <button
+                pButton
+                pRipple
+                type="button"
+                label="Cancel"
+                (click)="RequestCancel()"
+                class="p-button-danger"
+              ></button>
+            </div>
+          </td>
         </tr>
       </ng-template>
     </p-table>
@@ -85,95 +117,125 @@
 
   <!-- modal for raising request -->
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-       
-   <div class="modal-dialog">
-            
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+    #modal
+  >
+    <div class="modal-dialog">
       <div class="modal-content">
-                 
-         <div class="modal-header">
-                      
-            <p class="modal-title header" id="exampleModalLabel">Leave Request</p>
-                      
-            <button type="button" data-bs-dismiss="modal" aria-label="Close" class="cancel_top">
-                           <img src="../../../assets/Images/close.png" alt=""> <!--add image source for cancel button on top-->          
-            </button>
-                    
-         </div>
-                 
-         <div class="body">
-                        
-            <form action="">
-                               
-               <div class="row">
-                                      
-                  <div class="col-12 d-flex common_margin" style="margin-top: 15px;">
-                                             
-                     <div class="d-flex blocks">
-                          <input type="radio"  (change)="onSingle($event)" class="radio_button" name="day">                            
-                        <p class="day_count text-black">Single day</p>
-                                                
-                     </div>
-                                             
-                     <div class="d-flex" >
-                         <input type="radio" (change)="onChange($event)" class="radio_button" name="day">                            
-                        <p class="day_count text-black">Multiple days</p>
-                                                
-                     </div>
-                                         
-                  </div>
-                                  
-               </div>
-                               
-               <div class="row">
-                                      
-                  <div class="col-12 d-flex common_margin">
-                                             
-                     <div class="date_blocks">
-                                                    
-                        <p class="leave_date">From Date  <span>*</span>   </p>
-                            
-                            <p-calendar #single [showIcon]="true" inputId="icon"></p-calendar>   
-                                            
-                     </div>
-                                             
-                     <div>
-                                                    
-                        <p class="leave_date">To Date                                <span>*</span>                            </p>
-                        <p-calendar  [showIcon]="true" #multiple  inputId="icon" [disabled]="IsDisabled"></p-calendar>                        
-                     </div>
-                                         
-                  </div>
-                                  
-               </div>
-                               
-               <div class="row ">
-                                      
-                  <div class="col-12 common_margin">
-                                             
-                     <p class="leave_date">Reason</p>
-                                             
-                     <textarea class="reason" #titleInput  rows="5" cols="40" placeholder="Type your reason here..."></textarea>
-                                         
-                  </div>
-                                  
-               </div>
-                               
-               <div class="row " style="margin: 0 20px 16px 0;">
-                                      
-                  <div  class="col-12 d-flex justify-content-end">  
-                    <button type="button" class="cancel" data-bs-dismiss="modal">Cancel</button> 
-                    <button type="button"(click) = 'raiseleave(titleInput.value, single.value, multiple?.value)' class="raise_request" >Raise Request</button>                                  </div>
-                                  
-               </div>
-                           
-            </form>
-                    
-         </div>
-               
+        <div class="modal-header">
+          <p class="modal-title header" id="exampleModalLabel">Leave Request</p>
+
+          <button
+            type="button"
+            data-bs-dismiss="modal"
+            (click)="CancelModal(form)"
+            aria-label="Close"
+            class="cancel_top"
+          >
+            <img src="../../../assets/Images/close.png" alt="" />
+            <!--add image source for cancel button on top-->
+          </button>
+        </div>
+
+        <div class="body">
+          <form #form>
+            <div class="row">
+              <div class="col-12 d-flex common_margin" style="margin-top: 15px">
+                <div class="d-flex blocks">
+                  <input
+                    type="radio"
+                    (change)="onSingle($event)"
+                    class="radio_button"
+                    name="day"
+                  />
+                  <p class="day_count text-black">Single day</p>
+                </div>
+
+                <div class="d-flex">
+                  <input
+                    type="radio"
+                    (change)="onChange($event)"
+                    class="radio_button"
+                    name="day"
+                  />
+                  <p class="day_count text-black">Multiple days</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 d-flex common_margin">
+                <div class="date_blocks">
+                  <p class="leave_date">From Date <span>*</span></p>
+
+                  <p-calendar
+                    #single
+                    [showIcon]="true"
+                    inputId="icon"
+                  ></p-calendar>
+                </div>
+
+                <div>
+                  <p class="leave_date">To Date <span>*</span></p>
+                  <p-calendar
+                    [showIcon]="true"
+                    #multiple
+                    inputId="icon"
+                    [disabled]="IsDisabled"
+                  ></p-calendar>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 common_margin">
+                <p class="leave_date">Reason</p>
+
+                <textarea
+                  class="reason"
+                  #titleInput
+                  rows="5"
+                  cols="40"
+                  placeholder="Type your reason here..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="row" style="margin: 0 20px 16px 0">
+              <div class="col-12 d-flex justify-content-end">
+                <button
+                  type="button"
+                  (click)="CancelModal(form)"
+                  class="cancel"
+                  data-bs-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  (click)="
+                    raiseleave(
+                      titleInput.value,
+                      single.value,
+                      multiple?.value,
+                      form,
+                      modal
+                    )
+                  "
+                  data-bs-dismiss="modal"
+                  class="raise_request"
+                >
+                  Raise Request
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
-          
-   </div>
-     
-</div>
+    </div>
+  </div>
 </div>
