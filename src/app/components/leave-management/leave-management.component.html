@@ -7,15 +7,9 @@
     <h4 class="text-black" (click)="OpenPopup()" id="title">
       My Leave Request
     </h4>
-    <div
-      class="d-flex align-items-center justify-content-center btn-request-time-off"
-    >
+    <div class="d-flex align-items-center justify-content-center btn-request-time-off">
       <img src="../../../assets/svg/Request_Time_off.svg" alt="" />
-      <p
-        class="leave-btn"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
+      <p class="leave-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Request Time Off
       </p>
     </div>
@@ -29,7 +23,7 @@
       <ng-template pTemplate="header">
         <tr>
           <th pSortableColumn="Month">
-            Month <p-sortIcon field="code"></p-sortIcon>
+            Leave Type <p-sortIcon field="code"></p-sortIcon>
           </th>
           <th pSortableColumn="Starting">
             Starting <p-sortIcon field="name"></p-sortIcon>
@@ -60,18 +54,14 @@
 
       <ng-template pTemplate="body" let-Leave>
         <tr>
-          <td>{{ Leave.Month }}</td>
+          <td>{{ Leave.LeaveType }}</td>
           <td>{{ Leave.SingleDate }}</td>
           <td>{{ Leave.Ending }}</td>
           <td>{{ Leave.days }}</td>
           <td>
             {{ Leave.SmallReason }}
-            <img
-              pTooltip="{{ Leave.Reason }}"
-              tooltipPosition="bottom"
-              placeholder="Bottom"
-              src="../../../assets/Images/Reason.svg"
-            />
+            <img pTooltip="{{ Leave.Reason }}" tooltipPosition="bottom" placeholder="Bottom"
+              src="../../../assets/Images/Reason.svg" />
           </td>
 
           <td>{{ Leave.Approved }}</td>
@@ -84,14 +74,8 @@
           </td>
           <td class="align-items-center justify-content-center">
             <div>
-              <button
-                pButton
-                pRipple
-                type="button"
-                label="Cancel"
-                (click)="RequestCancel()"
-                class="p-button-danger"
-              ></button>
+              <button pButton pRipple type="button" label="Cancel" (click)="RequestCancel()"
+                class="p-button-danger"></button>
             </div>
           </td>
         </tr>
@@ -116,7 +100,7 @@
           <button type="button" class="btn2">U.S Holidays</button>
         </div>
       </div>
-      <p-table >
+      <p-table>
         <ng-template pTemplate="body" let-product>
           <tr>
             <td>Jan 02, 2023 Monday</td>
@@ -139,26 +123,14 @@
 
   <!-- modal for raising request -->
 
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-    #modal
-  >
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" #modal>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <p class="modal-title header" id="exampleModalLabel">Leave Request</p>
 
-          <button
-            type="button"
-            data-bs-dismiss="modal"
-            (click)="CancelModal(form)"
-            aria-label="Close"
-            class="cancel_top"
-          >
+          <button type="button" data-bs-dismiss="modal" (click)="CancelModal(form)" aria-label="Close"
+            class="cancel_top">
             <img src="../../../assets/Images/close.png" alt="" />
             <!--add image source for cancel button on top-->
           </button>
@@ -167,24 +139,21 @@
         <div class="body">
           <form #form>
             <div class="row">
+              <div class="col-12 d-flex flex-column common_margin" style="margin-top: 15px">
+                <p class="day_count text-black m-3">Select Leave Type*</p>
+                <p-dropdown #cmpDropDown  [options]="cities" placeholder="Select Leave Type" optionLabel="name"
+                  [showClear]="true"></p-dropdown>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-12 d-flex common_margin" style="margin-top: 15px">
                 <div class="d-flex blocks">
-                  <input
-                    type="radio"
-                    (change)="onSingle($event)"
-                    class="radio_button"
-                    name="day"
-                  />
+                  <input type="radio" (change)="onSingle($event)" class="radio_button" name="day" />
                   <p class="day_count text-black">Single day</p>
                 </div>
 
                 <div class="d-flex">
-                  <input
-                    type="radio"
-                    (change)="onChange($event)"
-                    class="radio_button"
-                    name="day"
-                  />
+                  <input type="radio" (change)="onChange($event)" class="radio_button" name="day" />
                   <p class="day_count text-black">Multiple days</p>
                 </div>
               </div>
@@ -195,21 +164,12 @@
                 <div class="date_blocks">
                   <p class="leave_date">From Date <span>*</span></p>
 
-                  <p-calendar
-                    #single
-                    [showIcon]="true"
-                    inputId="icon"
-                  ></p-calendar>
+                  <p-calendar #single [showIcon]="true" inputId="icon"></p-calendar>
                 </div>
 
                 <div>
                   <p class="leave_date">To Date <span>*</span></p>
-                  <p-calendar
-                    [showIcon]="true"
-                    #multiple
-                    inputId="icon"
-                    [disabled]="IsDisabled"
-                  ></p-calendar>
+                  <p-calendar [showIcon]="true" #multiple inputId="icon" [disabled]="IsDisabled"></p-calendar>
                 </div>
               </div>
             </div>
@@ -217,40 +177,26 @@
               <div class="col-12 common_margin">
                 <p class="leave_date">Reason</p>
 
-                <textarea
-                  class="reason"
-                  #titleInput
-                  rows="5"
-                  cols="40"
-                  placeholder="Type your reason here..."
-                ></textarea>
+                <textarea class="reason" #titleInput rows="5" cols="40"
+                  placeholder="Type your reason here..."></textarea>
               </div>
             </div>
 
             <div class="row" style="margin: 0 20px 16px 0">
               <div class="col-12 d-flex justify-content-end">
-                <button
-                  type="button"
-                  (click)="CancelModal(form)"
-                  class="cancel"
-                  data-bs-dismiss="modal"
-                >
+                <button type="button" (click)="CancelModal(form)" class="cancel" data-bs-dismiss="modal">
                   Cancel
                 </button>
-                <button
-                  type="button"
-                  (click)="
+                <button type="button" (click)="
                     raiseleave(
                       titleInput.value,
                       single.value,
                       multiple?.value,
                       form,
-                      modal
+                      modal,
+                      cmpDropDown
                     )
-                  "
-                  data-bs-dismiss="modal"
-                  class="raise_request"
-                >
+                  " data-bs-dismiss="modal" class="raise_request">
                   Raise Request
                 </button>
               </div>

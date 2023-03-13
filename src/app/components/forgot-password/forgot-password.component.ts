@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import 
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',

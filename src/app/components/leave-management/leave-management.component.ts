@@ -13,6 +13,12 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 export class LeaveManagementComponent {
   visibleSidebar: boolean = false;
+  cities = [
+    {name: 'Casual Leave', code: 'CL'},
+    {name: 'Sick Leave', code: 'SL'},
+   
+];
+
   Leave: any = [];
   IsDisabled:boolean = true;
   value5 :Date = new Date();
@@ -50,14 +56,16 @@ export class LeaveManagementComponent {
       this.IsDisabled = true;
     }
   }
-  raiseleave(reason:any, date:Date, multipleday: Date , form:any,modal: any) 
+getChangeAppDetails = (e:any) => {
+console.log(e?.name);
+  }
+  raiseleave(reason:any, date:Date, multipleday: Date , form:any,modal: any,dropdownValue: any) 
    {
     debugger;
   let day = date.getDate();
   let month = date.getMonth();
   let year = date.getFullYear();
-  //month of leave
-  var actualmonth = date.toLocaleString('default', { month: 'long' });
+  
   
   let Singleday= `${month}-${day}-${year}`;
   //single-day
@@ -71,8 +79,10 @@ export class LeaveManagementComponent {
 
 var diff = Math.abs(date.getTime() - multipleday?.getTime());
 var diffDays = Math.ceil(diff / (1000 * 3600 * 24)); 
-//no of days
+//type of leaves
+var leavereq = dropdownValue.value.name;
 
+console.log(leavereq);
 //short the reason
 var smallreason =  reason.substring(0, 20) + '...';
 if(multipleday == undefined)
@@ -83,7 +93,7 @@ if(multipleday == undefined)
   }
   //details for leave-management
     const details = {  
-      Month:actualmonth,
+      LeaveType :leavereq,
       SmallReason: smallreason,
       Reason: reason,
       SingleDate: Singleday,
@@ -106,7 +116,8 @@ if(multipleday == undefined)
     //to reset the form after raising the request for leave
     form.reset();
     console.log(modal);
-    modal.CancelModal();
+  
+   
 
 this.OpenPopup();
   }
@@ -144,4 +155,5 @@ this.OpenPopup();
   //         return (event.order * result);
   //     });
   // }
+  
 }

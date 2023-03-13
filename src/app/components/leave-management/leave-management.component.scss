@@ -192,3 +192,6 @@ textarea::placeholder {
 	display: flex !important;
 	justify-content: center!important;
 } 
+:host::ng-deep .p-dropdown   {
+	width: 28vw !important;
+}

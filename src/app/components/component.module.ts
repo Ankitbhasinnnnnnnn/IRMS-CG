@@ -24,7 +24,7 @@ import { LeaveManagementComponent } from './leave-management/leave-management.co
 import { CalendarModule } from 'primeng/calendar';
 import { TooltipModule } from 'primeng/tooltip';
 import { NewPasswordComponent } from './new-password/new-password.component';
-
+import { DropdownModule } from 'primeng/dropdown';
 @NgModule({
   imports: [
     CommonModule,
@@ -42,7 +42,8 @@ import { NewPasswordComponent } from './new-password/new-password.component';
     TableModule,
     SidebarModule,
     CalendarModule,
-    TooltipModule
+    TooltipModule,
+    DropdownModule
   ],
   declarations: [
     FooterComponent,
