@@ -57,11 +57,14 @@ export class LeaveManagementComponent {
     }
   }
 getChangeAppDetails = (e:any) => {
+ 
 console.log(e?.name);
   }
   raiseleave(reason:any, date:Date, multipleday: Date , form:any,modal: any,dropdownValue: any) 
    {
     debugger;
+    //email of the user stored in sessionstorage
+   const useremail = sessionStorage?.getItem("Email") ?? "";
   let day = date.getDate();
   let month = date.getMonth();
   let year = date.getFullYear();
@@ -102,7 +105,7 @@ if(multipleday == undefined)
       req_sent: 'Neeraj Shridhar',
       Approved: "",
       Status: "Pending",
-      Action: "Cancel",
+      email: useremail
 
       
 
@@ -116,6 +119,7 @@ if(multipleday == undefined)
     //to reset the form after raising the request for leave
     form.reset();
     console.log(modal);
+    console.log(details);
   
    
 
